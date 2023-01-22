@@ -7,11 +7,12 @@ export const TagList = styled.div`
     gap: ${rem(15)};
 `
 
-export const StyledQuote = styled.figure`
-    background-color: ${variables.colors.darkGray};
+export const StyledQuote = styled.div`
+    ${variables.glassEffect};
     border-radius: ${variables.borderRadius};
     padding: ${rem(20)};
     q {
+        mix-blend-mode: overlay;
         &::before {
             content: '<';
             margin-right: ${rem(5)};
@@ -22,6 +23,7 @@ export const StyledQuote = styled.figure`
         }
     }
     figcaption {
+        mix-blend-mode: overlay;
         margin-top: ${rem(20)};
         text-align: end;
     }

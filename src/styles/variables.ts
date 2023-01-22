@@ -28,13 +28,15 @@ export const variables = {
     browserContext: 16,
     borderRadius: 6,
     glassEffect: () => css`
-        background: linear-gradient(
+        /* background: linear-gradient(
             180deg,
             rgba(217, 217, 217, 0.25) 0%,
             rgba(217, 217, 217, 0) 100%
-        );
+        ); */
         box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
-        backdrop-filter: blur(25px);
+        backdrop-filter: saturate(180%) blur(25px);
+        background: rgba(45, 45, 45, 0.4);
+        border: 1px solid rgba(45, 45, 45, 0.17);
     `
 }
 

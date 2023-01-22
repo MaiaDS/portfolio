@@ -12,25 +12,22 @@ export default function Home() {
                 </div>
                 <div>
                     <p>
-                        Currently working as a front-end developer in France, I'm planing to
+                        Currently working as a front-end developer in France, I am planning to
                         relocate to Toronto, Canada.
                     </p>
                     <p>
                         I initially studied graphic design which enables me to understand better the
-                        designers I'm working with, and so improving communication within the team
-                        one another. Curiosity and rigour are my keywords. I adapt quickly and am
-                        self-reliant.
+                        designers I am working with, and so improving communication within the team.
+                        Curiosity and rigour are my keywords. I adapt quickly and am self-reliant.
                     </p>
                     <StyledQuote>
-                        <blockquote>
-                            <q>
-                                Maia has shown great adaptability in moving environment as well as a
-                                proactive mindset to support very qualitative delivery. She's
-                                solution driven and able to propose options when facing a problem.
-                                Her skills and communication capabilities make her an instrumental
-                                asset for the project success.
-                            </q>
-                        </blockquote>
+                        <q>
+                            Maia has shown great adaptability in moving environment as well as a
+                            proactive mindset to support very qualitative delivery. She's solution
+                            driven and able to propose options when facing a problem. Her skills and
+                            communication capabilities make her an instrumental asset for the
+                            project success.
+                        </q>
                         <figcaption>—Sanofi project's manager testimony</figcaption>
                     </StyledQuote>
                 </div>
