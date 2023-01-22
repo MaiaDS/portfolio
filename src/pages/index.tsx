@@ -1,5 +1,6 @@
 import Tag from '@/components/tag'
 import { TAGS } from '@/data/tags'
+import { TagList } from '@/styles/components/Home'
 
 export default function Home() {
     return (
@@ -31,11 +32,11 @@ export default function Home() {
                         <figcaption>—Sanofi project's manager testimony</figcaption>
                     </figure>
                 </div>
-                <div>
+                <TagList>
                     {TAGS.map((tag, index) => (
                         <Tag key={index} content={tag} />
                     ))}
-                </div>
+                </TagList>
             </main>
         </>
     )
