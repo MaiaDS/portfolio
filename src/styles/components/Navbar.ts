@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { variables } from '../variables'
+import { rem, variables } from '../variables'
 
 export const StyledNavbar = styled.nav`
     padding: 5vh 5vw;
@@ -10,11 +10,11 @@ export const StyledNavbar = styled.nav`
 
         li {
             list-style-position: outside;
-            padding-left: 1vw;
+            padding-left: ${rem(10)};
         }
 
         ul {
-            padding-left: 2vw;
+            padding-left: ${rem(10)};
         }
     }
 `

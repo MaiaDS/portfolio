@@ -10,7 +10,7 @@ export const StyledLayout = styled.div`
 
     main {
         flex: 1 1 auto;
-        padding: 5vh 5vw;
+        padding: ${rem(50)};
     }
 
     * {

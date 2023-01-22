@@ -4,6 +4,18 @@ export function rem(pixels: number, context: number = variables.browserContext) 
     return `${pixels / context}rem`
 }
 
+// export const toVH = (pixels: number) => {
+//     return typeof window !== 'undefined' ? `${(pixels * 100) / window.innerHeight}vh` : null
+// }
+
+// export const toVW = (pixels: number) => {
+//     return typeof window !== 'undefined' ? `${(pixels * 100) / window.innerWidth}vw` : null
+// }
+
+// export function toResponsiveUnits(width: number, height: number) {
+//     return toVH(height) && toVW(width) ? `${toVH(height) + ' ' + toVW(width)}` : null
+// }
+
 export const variables = {
     colors: {
         blue: '#679AD1',

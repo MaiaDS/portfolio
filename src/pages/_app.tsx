@@ -4,7 +4,7 @@ import Navbar from '@/components/layout/Navbar'
 import { StyledLayout } from '@/styles/components/Layout'
 import { Font } from '@/styles/variables'
 
-export default function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
     return (
         <>
             <Font />
@@ -15,3 +15,5 @@ export default function App({ Component, pageProps }: AppProps) {
         </>
     )
 }
+
+export default App
