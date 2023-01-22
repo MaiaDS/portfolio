@@ -1,13 +1,15 @@
 import Tag from '@/components/tag'
 import { TAGS } from '@/data/tags'
-import { TagList } from '@/styles/components/Home'
+import { StyledHome, StyledQuote, TagList } from '@/styles/components/Home'
 
 export default function Home() {
     return (
         <>
-            <main>
-                <h1>Maia Da Silva</h1>
-                <h2>Front-end Developer</h2>
+            <StyledHome>
+                <div>
+                    <h1>Maia Da Silva</h1>
+                    <h2>Front-end Developer</h2>
+                </div>
                 <div>
                     <p>
                         Currently working as a front-end developer in France, I'm planing to
@@ -19,7 +21,7 @@ export default function Home() {
                         one another. Curiosity and rigour are my keywords. I adapt quickly and am
                         self-reliant.
                     </p>
-                    <figure>
+                    <StyledQuote>
                         <blockquote>
                             <q>
                                 Maia has shown great adaptability in moving environment as well as a
@@ -30,14 +32,14 @@ export default function Home() {
                             </q>
                         </blockquote>
                         <figcaption>—Sanofi project's manager testimony</figcaption>
-                    </figure>
+                    </StyledQuote>
                 </div>
                 <TagList>
                     {TAGS.map((tag, index) => (
                         <Tag key={index} content={tag} />
                     ))}
                 </TagList>
-            </main>
+            </StyledHome>
         </>
     )
 }

@@ -2,7 +2,7 @@ import { rem, variables } from '@/styles/variables'
 import styled from 'styled-components'
 
 const StyledTag = styled.span`
-    padding: ${rem(20)};
+    padding: ${rem(15)} ${rem(20)};
     background-color: ${variables.colors.mediumGray};
     border-radius: 60px;
     background: linear-gradient(180deg, rgba(217, 217, 217, 0.25) 0%, rgba(217, 217, 217, 0) 100%);
