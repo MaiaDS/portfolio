@@ -1,4 +1,4 @@
-import { StyledLink, StyledNavbar } from '@/styles/components/Navbar'
+import { Logo, StyledLink, StyledNavbar } from '@/styles/components/Navbar'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -23,9 +23,10 @@ const Navbar = () => {
 
     return (
         <StyledNavbar>
+            <Logo />
             <ul>
-                <NavLink route="/" label="About.Me" iconSrc="icons/info.png" />
-                <NavLink route="/contact" label="Contact.Me" iconSrc="icons/comment.png" />
+                <NavLink route="/" label="About.Me" iconSrc="assets/icons/info.png" />
+                <NavLink route="/contact" label="Contact.Me" iconSrc="assets/icons/comment.png" />
             </ul>
         </StyledNavbar>
     )

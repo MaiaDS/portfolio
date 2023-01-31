@@ -25,6 +25,16 @@ export const StyledNavbar = styled.nav`
     }
 `
 
+export const Logo = styled.div`
+    margin: 0 0 ${rem(50)} ${rem(50)};
+    width: ${rem(100)};
+    height: ${rem(100)};
+    background-image: url('/assets/logo-white.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+`
+
 export const StyledLink = styled.li<{ src: string }>`
     list-style-image: url(${(props) => props.src});
     border: 0.5px solid transparent;
