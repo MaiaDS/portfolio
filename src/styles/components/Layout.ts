@@ -3,7 +3,7 @@ import { rem, variables } from '../variables'
 
 export const StyledLayout = styled.div`
     font-family: 'CascadiaCode-Regular';
-    background-color: ${variables.colors.black};
+    background-color: ${variables.colors.darkGray};
     color: ${variables.colors.lightGray};
     display: flex;
     min-height: 100vh;

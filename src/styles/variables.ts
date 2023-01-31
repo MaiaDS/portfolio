@@ -15,13 +15,20 @@ export const hexToRgb = (hex: string): { r: number; g: number; b: number } => {
 
 export const variables = {
     colors: {
-        lightBlue: '#679AD1',
-        darkBlue: '#16385B',
-        orange: '#C5947C',
         lightGray: '#C7C7C7',
-        mediumGray: '#2D2D2D',
-        darkGray: '#252526',
-        black: '#1E1E1E'
+        gray: '#2D2D2D',
+        mediumGray: '#252526',
+        darkGray: '#1E1E1E',
+        orange: '#C5947C',
+        pink: '#BC89BD',
+        green: '#71C6B1',
+        yellow: '#F9D849',
+        constBlue: '#6FBFF9',
+        variableBlue: '#AADAFA',
+        declarationBlue: '#679AD1',
+        arrayBlue: '#4A9DF8',
+        lightBlue: '#75BEFF',
+        darkBlue: '#16385B'
     },
     browserContext: 16,
     borderRadius: 6,

@@ -3,7 +3,7 @@ import { rem, variables } from '../variables'
 
 export const StyledNavbar = styled.nav`
     padding: ${rem(50)} 0 ${rem(50)} 0;
-    background-color: ${variables.colors.darkGray};
+    background-color: ${variables.colors.mediumGray};
 
     ul {
         line-height: 2rem;
