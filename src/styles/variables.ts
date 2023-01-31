@@ -42,6 +42,94 @@ export const variables = {
         backdrop-filter: saturate(180%) blur(25px);
         background: rgba(45, 45, 45, 0.4);
         border: 1px solid rgba(45, 45, 45, 0.17);
+    `,
+    hueEffect: () => css`
+        position: relative;
+        &::after {
+            --m-i: linear-gradient(#000, #000);
+            --m-o: content-box, padding-box;
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding: var(--border-width);
+            background-image: conic-gradient(
+                ${variables.colors.pink},
+                ${variables.colors.pink},
+                ${variables.colors.pink},
+                ${variables.colors.pink},
+                ${variables.colors.pink},
+                ${variables.colors.pink},
+                ${variables.colors.pink}
+            );
+            -webkit-mask-image: var(--m-i), var(--m-i);
+            mask-image: var(--m-i), var(--m-i);
+            -webkit-mask-origin: var(--m-o);
+            mask-origin: var(--m-o);
+            mask-clip: var(--m-o);
+            mask-composite: exclude;
+            -webkit-mask-composite: destination-out;
+            filter: hue-rotate(0);
+            animation: rotate-hue634 linear 500ms infinite;
+            animation-play-state: paused;
+        }
+
+        &:hover::after {
+            animation-play-state: running;
+        }
+
+        @keyframes rotate-hue634 {
+            to {
+                filter: hue-rotate(1turn);
+            }
+        }
+
+        &::before {
+            content: '';
+            background: linear-gradient(
+                45deg,
+                ${variables.colors.arrayBlue},
+                ${variables.colors.green},
+                ${variables.colors.pink},
+                ${variables.colors.orange},
+                ${variables.colors.yellow},
+                ${variables.colors.green},
+                ${variables.colors.arrayBlue},
+                ${variables.colors.green}
+            );
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 600%;
+            z-index: -1;
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            filter: blur(8px);
+            animation: glowing345 20s linear infinite;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 20px;
+            opacity: 0;
+        }
+
+        @keyframes glowing345 {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        &:hover::before {
+            opacity: 0.5;
+        }
     `
 }
 
