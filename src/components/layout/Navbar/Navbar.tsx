@@ -1,24 +1,31 @@
 import { StyledLink, StyledNavbar } from '@/styles/components/Navbar'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+
+interface INavLink {
+    label: string
+    route: string
+    iconSrc: string
+}
+
+const NavLink = (props: INavLink) => {
+    const router = useRouter()
+
+    return (
+        <StyledLink src={props.iconSrc} className={router.pathname === props.route ? 'active' : ''}>
+            <Link href={props.route}>{props.label}</Link>
+        </StyledLink>
+    )
+}
 
 const Navbar = () => {
+    const router = useRouter()
+
     return (
         <StyledNavbar>
             <ul>
-                <StyledLink src="icons/info.png">
-                    <Link href="/">About.Me</Link>
-                </StyledLink>
-                <li>
-                    Projects
-                    <ul>
-                        <StyledLink src="">Project 1</StyledLink>
-                        <StyledLink src="">Project 2</StyledLink>
-                    </ul>
-                </li>
-                <li>Playground</li>
-                <StyledLink src="icons/comment.png">
-                    <Link href="/contact">Contact.Me</Link>
-                </StyledLink>
+                <NavLink route="/" label="About.Me" iconSrc="icons/info.png" />
+                <NavLink route="/contact" label="Contact.Me" iconSrc="icons/comment.png" />
             </ul>
         </StyledNavbar>
     )

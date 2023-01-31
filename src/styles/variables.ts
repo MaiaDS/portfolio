@@ -4,21 +4,19 @@ export function rem(pixels: number, context: number = variables.browserContext) 
     return `${pixels / context}rem`
 }
 
-// export const toVH = (pixels: number) => {
-//     return typeof window !== 'undefined' ? `${(pixels * 100) / window.innerHeight}vh` : null
-// }
-
-// export const toVW = (pixels: number) => {
-//     return typeof window !== 'undefined' ? `${(pixels * 100) / window.innerWidth}vw` : null
-// }
-
-// export function toResponsiveUnits(width: number, height: number) {
-//     return toVH(height) && toVW(width) ? `${toVH(height) + ' ' + toVW(width)}` : null
-// }
+export const hexToRgb = (hex: string): { r: number; g: number; b: number } => {
+    const res = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)!
+    return {
+        r: parseInt(res[1], 16),
+        g: parseInt(res[2], 16),
+        b: parseInt(res[3], 16)
+    }
+}
 
 export const variables = {
     colors: {
-        blue: '#679AD1',
+        lightBlue: '#679AD1',
+        darkBlue: '#16385B',
         orange: '#C5947C',
         lightGray: '#C7C7C7',
         mediumGray: '#2D2D2D',
