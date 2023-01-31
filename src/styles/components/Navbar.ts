@@ -11,6 +11,10 @@ export const StyledNavbar = styled.nav`
         li {
             list-style-position: outside;
             padding-left: ${rem(10)};
+
+            a {
+                color: ${variables.colors.lightGray};
+            }
         }
 
         ul {
