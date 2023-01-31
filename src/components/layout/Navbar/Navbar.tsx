@@ -23,7 +23,9 @@ const Navbar = () => {
 
     return (
         <StyledNavbar>
-            <Logo />
+            <Link href="/">
+                <Logo />
+            </Link>
             <ul>
                 <NavLink route="/" label="About.Me" iconSrc="assets/icons/info.png" />
                 <NavLink route="/contact" label="Contact.Me" iconSrc="assets/icons/comment.png" />
