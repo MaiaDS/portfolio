@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-// On MACOS, avoid trackpad to cause white space at the bottom on scroll
-html,
-body {
-    overflow: hidden;
-}
-
 html {
     color: #000000;
     background: #ffffff;
