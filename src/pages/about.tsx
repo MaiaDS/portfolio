@@ -5,7 +5,6 @@ import ResumeButtons from '@/components/resume-buttons'
 import Tag from '@/components/tag'
 import { DATA } from '@/data/data'
 import { StyledComponent, StyledQuote, TagList } from '@/styles/components/About'
-import { variables } from '@/styles/variables'
 
 export default function About() {
     return (
@@ -14,8 +13,14 @@ export default function About() {
             <StyledComponent>
                 <Overview />
                 <StyledQuote>
-                    <q>{DATA.testimony.quote}</q>
-                    <figcaption>—{DATA.testimony.who}</figcaption>
+                    <q>
+                        Maïa has shown great adaptability in moving environment as well as a
+                        proactive mindset to support very qualitative delivery. She's solution
+                        driven and able to propose options when facing a problem. Her skills and
+                        communication capabilities make her an instrumental asset for the project
+                        success.
+                    </q>
+                    <figcaption>—Sanofi project’s manager testimony</figcaption>
                 </StyledQuote>
                 <TagList>
                     {DATA.tags.map((tag, index) => (

@@ -22,13 +22,23 @@ const Overview = () => {
     return (
         <StyledOverview>
             <div>
-                <h1>{DATA.name}</h1>
-                <h2>{DATA.position}</h2>
+                <h1>Maïa Da Silva</h1>
+                <h2>Front-end Developer</h2>
             </div>
             <div>
-                <p>{DATA.abstract.p1}</p>
-                <p>{DATA.abstract.p2}</p>
-                <p>{DATA.abstract.p3}</p>
+                <p>
+                    Currently working as a front-end developer in France, I’m planing to relocate to
+                    Toronto, Canada.
+                </p>
+                <p>
+                    I initially studied graphic design which enables me to understand better the
+                    designers I’m working with, and so improving communication within the team one
+                    another.
+                </p>
+                <p>
+                    Curiosity and rigour are my keywords. I adapt quickly and am self-reliant. I
+                    like to grow alongside others while challenging myself.
+                </p>
             </div>
         </StyledOverview>
     )
