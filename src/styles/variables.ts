@@ -31,7 +31,7 @@ export const variables = {
         darkBlue: '#16385B'
     },
     browserContext: 16,
-    borderRadius: 6,
+    borderRadius: `6px`,
     glassEffect: () => css`
         /* background: linear-gradient(
             180deg,
