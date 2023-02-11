@@ -41,5 +41,12 @@ export const StyledHome = styled.main`
         p {
             margin-bottom: ${rem(25)};
         }
+
+        &:last-of-type {
+            display: flex;
+            button:first-child {
+                margin-right: ${rem(20)};
+            }
+        }
     }
 `

@@ -15,6 +15,7 @@ export const StyledLayout = styled.div`
 
     * {
         box-sizing: border-box;
+        font-family: 'CascadiaCode-Regular';
     }
 
     h1,
