@@ -42,6 +42,6 @@ export const StyledLink = styled.li<{ src: string }>`
     &.active,
     &:hover {
         background-color: ${variables.colors.darkBlue};
-        border-color: ${variables.colors.lightBlue};
+        border-color: ${variables.colors.arrayBlue};
     }
 `
