@@ -6,6 +6,7 @@ export const StyledLayout = styled.div`
     background-color: ${variables.colors.darkGray};
     color: ${variables.colors.lightGray};
     display: flex;
+    width: 100vw;
     min-height: 100vh;
 
     main {

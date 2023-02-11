@@ -9,7 +9,6 @@ const App = ({ Component, pageProps }: AppProps) => {
         <>
             <Font />
             <StyledLayout>
-                <Navbar />
                 <Component {...pageProps} />
             </StyledLayout>
         </>
