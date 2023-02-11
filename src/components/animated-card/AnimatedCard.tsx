@@ -5,8 +5,8 @@ import styled from 'styled-components'
 const StyledAnimatedCard = styled.div`
     width: ${rem(489.5)};
     height: ${rem(726.35)};
-    /* clip-path: inset(0 0 1px 0 round 6px); */
-    /* transform: rotateY(var(--rotationX)) rotateX(var(--rotationY)); */
+    clip-path: inset(0 0 1px 0 round 6px);
+    transform: rotateY(var(--rotationX)) rotateX(var(--rotationY));
     position: relative;
 
     div {
@@ -20,8 +20,8 @@ const StyledAnimatedCard = styled.div`
         perspective: ${rem(600)};
 
         > div {
-            transform: rotateY(var(--rotationX)) rotateX(var(--rotationY));
-            clip-path: inset(0 0 1px 0 round 6px);
+            /* transform: rotateY(var(--rotationX)) rotateX(var(--rotationY));
+            clip-path: inset(0 0 1px 0 round 6px); */
 
             img {
                 width: 100%;
