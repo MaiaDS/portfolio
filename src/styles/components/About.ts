@@ -32,5 +32,21 @@ export const StyledQuote = styled.div`
 export const StyledComponent = styled.main`
     > div {
         margin-bottom: ${rem(40)};
+
+        &:last-of-type {
+            display: flex;
+            gap: ${rem(20)};
+        }
+    }
+
+    h1,
+    h2 {
+        text-transform: uppercase;
+        letter-spacing: 0.25rem;
+        font-variant-caps: all-small-caps;
+    }
+
+    p {
+        margin-bottom: ${rem(20)};
     }
 `

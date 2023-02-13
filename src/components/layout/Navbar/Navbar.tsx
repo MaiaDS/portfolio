@@ -27,7 +27,7 @@ const Navbar = () => {
                 <Logo />
             </Link>
             <ul>
-                <NavLink route="/" label="About.Me" iconSrc="assets/icons/info.png" />
+                <NavLink route="/about" label="About.Me" iconSrc="assets/icons/info.png" />
                 {/* <NavLink route="/contact" label="Contact.Me" iconSrc="assets/icons/comment.png" /> */}
             </ul>
         </StyledNavbar>

@@ -24,10 +24,13 @@ const StyledButton = styled.button<{ color: string; hoverBgColor: string; icon?:
         width: ${rem(30)};
         height: ${rem(30)};
         margin-right: ${rem(5)};
-        background-image: url(${(props) => props.icon});
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: ${rem(15)} auto;
+        div {
+            background-color: ${variables.colors.gray};
+            width: ${rem(30)};
+            height: ${rem(30)};
+            -webkit-mask: url(${(props) => props.icon}) no-repeat 50% 50%;
+            mask: url(${(props) => props.icon}) no-repeat 50% 50%;
+        }
     }
 
     &:hover {
@@ -35,6 +38,9 @@ const StyledButton = styled.button<{ color: string; hoverBgColor: string; icon?:
         color: ${variables.colors.darkGray};
         span {
             background-color: ${variables.colors.darkGray};
+            div {
+                background-color: ${(props) => props.hoverBgColor};
+            }
         }
     }
 `
@@ -46,7 +52,11 @@ const Button = (props: IButton) => {
             hoverBgColor={props.hoverBgColor}
             icon={props.icon}
             onClick={props.onClick}>
-            {props.icon && <span></span>}
+            {props.icon && (
+                <span>
+                    <div></div>
+                </span>
+            )}
             {props.label}
         </StyledButton>
     )
