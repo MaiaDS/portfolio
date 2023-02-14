@@ -22,9 +22,7 @@ export default function Home() {
 
     return (
         <StyledLandingPage>
-            <Canvas>
-                <Beehive />
-            </Canvas>
+            <Beehive />
             <div ref={card}>
                 <h1>Maïa Da Silva</h1>
                 <h2>Front-end Developer</h2>

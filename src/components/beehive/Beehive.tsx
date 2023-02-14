@@ -1,5 +1,5 @@
 import { variables } from '@/styles/variables'
-import { Edges } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
 import { useMemo, useState } from 'react'
 import { Vector3 } from 'three'
 
@@ -14,18 +14,19 @@ const Hexagon = () => {
             ),
         []
     )
-    const scale = useMemo(() => Math.random()-0.5,[])
+    const scale = useMemo(() => Math.random() * 0.1, [])
     return (
         <mesh
             position={position}
             scale={[scale, scale, scale]}
+            rotation={[Math.PI * 0.5, 0, 0]}
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}>
-            <ringGeometry args={[0, 1, 6, 1, Math.PI / 2]} />
-            <meshBasicMaterial
+            <cylinderGeometry args={[6, 6, 6, 6]} />
+            <meshStandardMaterial
                 color={hovered ? variables.colors.orange : variables.colors.arrayBlue}
             />
-            <Edges color={hovered ? variables.colors.orange : variables.colors.darkGray} />
+            {/* <Edges color={hovered ? variables.colors.orange : variables.colors.darkGray} /> */}
         </mesh>
     )
 }
@@ -33,9 +34,13 @@ const Hexagon = () => {
 const Beehive = () => {
     return (
         <>
-            {Array.from(Array(200).keys()).map(() => (
-                <Hexagon />
-            ))}
+            <Canvas>
+                <ambientLight intensity={0.5} />
+                <pointLight />
+                {Array.from(Array(150).keys()).map(() => (
+                    <Hexagon />
+                ))}
+            </Canvas>
         </>
     )
 }
