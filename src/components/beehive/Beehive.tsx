@@ -1,4 +1,5 @@
 import { variables } from '@/styles/variables'
+import { Edges } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { useMemo, useState } from 'react'
 import { Vector3 } from 'three'
@@ -26,7 +27,7 @@ const Hexagon = () => {
             <meshStandardMaterial
                 color={hovered ? variables.colors.orange : variables.colors.arrayBlue}
             />
-            {/* <Edges color={hovered ? variables.colors.orange : variables.colors.darkGray} /> */}
+            <Edges color={hovered ? variables.colors.orange : variables.colors.arrayBlue} />
         </mesh>
     )
 }
