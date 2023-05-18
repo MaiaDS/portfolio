@@ -13,6 +13,8 @@ body {
     font-size: ${({ theme }) => theme.fontSizes.default};
     font-family: 'Marianne-Regular';
 
+    padding: ${({ theme }) => theme.spacing.xl};
+
     * {
         box-sizing: border-box;
     }

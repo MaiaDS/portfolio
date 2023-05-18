@@ -2,6 +2,11 @@ import { rem } from '@/styles/utils/utils'
 import styled from 'styled-components'
 
 export const StyledNavbar = styled.nav`
+    width: 100%;
+    height: fit-content;
+    padding: ${({ theme }) => theme.spacing.xl};
+    padding-bottom: 0;
+
     ul {
         display: flex;
         gap: ${({ theme }) => theme.spacing.m};

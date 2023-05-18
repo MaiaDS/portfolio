@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { rem } from '../utils/utils'
 
 export const StyledLandingPage = styled.main`
-    padding: ${({ theme }) => theme.spacing.xl};
     height: 100vh;
     position: relative;
     display: flex;
