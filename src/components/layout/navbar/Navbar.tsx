@@ -8,6 +8,10 @@ const Navbar = () => {
         {
             label: 'READ.me',
             route: '/readme'
+        },
+        {
+            label: 'About.Me',
+            route: '/aboutme'
         }
     ]
     return (

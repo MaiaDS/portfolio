@@ -9,7 +9,7 @@ export const StyledNavbar = styled.nav`
 
     ul {
         display: flex;
-        gap: ${({ theme }) => theme.spacing.m};
+        gap: ${({ theme }) => theme.spacing.l};
         align-items: center;
         justify-content: end;
 
@@ -17,12 +17,13 @@ export const StyledNavbar = styled.nav`
             color: ${({ theme }) => theme.colors.dark};
             font-family: 'Marianne-Bold';
             letter-spacing: ${rem(4)};
+            padding-bottom: ${({ theme }) => theme.spacing.xs};
+            border-bottom: 2px solid transparent;
 
             &:hover,
             &.active {
                 color: ${({ theme }) => theme.colors.primary};
-                padding-bottom: ${({ theme }) => theme.spacing.xs};
-                border-bottom: 2px solid ${({ theme }) => theme.colors.secondary};
+                border-color: ${({ theme }) => theme.colors.secondary};
             }
         }
     }
