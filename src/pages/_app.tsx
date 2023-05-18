@@ -1,15 +1,14 @@
 import '../styles/_reset.scss'
 import type { AppProps } from 'next/app'
-import { GlobalStyle } from '@/styles/GlobalStyle'
 import { ThemeProvider } from 'styled-components'
-import { DefaultTheme } from '@/styles/utils/Themes'
+import { CustomTheme } from '@/styles/utils/theme'
+import { GlobalStyle } from '@/styles/GlobalStyle'
 
 const App = ({ Component, pageProps }: AppProps) => {
     return (
-        <ThemeProvider theme={DefaultTheme}>
-            <GlobalStyle>
-                <Component {...pageProps} />
-            </GlobalStyle>
+        <ThemeProvider theme={CustomTheme}>
+            <GlobalStyle />
+            <Component {...pageProps} />
         </ThemeProvider>
     )
 }
