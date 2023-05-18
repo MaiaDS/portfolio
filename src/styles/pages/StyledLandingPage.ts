@@ -12,6 +12,13 @@ export const StyledLandingPage = styled.main`
             letter-spacing: ${rem(-4)};
             line-height: ${rem(90)};
             font-variant-caps: normal;
+            /* display: ; */
+
+            span {
+                display: inline-block;
+                width: fit-content;
+                transform: rotate(180deg);
+            }
         }
 
         h2 {
@@ -33,7 +40,7 @@ export const StyledLandingPage = styled.main`
         }
 
         &:last-of-type {
-            transform: rotate(90);
+            /* transform: rotate(180deg); */
             bottom: ${rem(-50)};
             left: ${rem(-50)};
         }

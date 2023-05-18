@@ -6,7 +6,7 @@ const LandingPage = () => {
         <StyledLandingPage>
             <div>
                 <h1>
-                    Maïa
+                    Ma<span>ï</span>a
                     <br /> Da Silva
                 </h1>
                 <h2>Front-end Developer</h2>
