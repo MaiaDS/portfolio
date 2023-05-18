@@ -15,13 +15,13 @@ const LandingPage = () => {
         <StyledLandingPage>
             <BeehiveSVG />
             <BeehiveSVG />
-            <div>
+            <section>
                 <h1>
                     Ma<span>ï</span>a
                     <br /> Da Silva
                 </h1>
                 <h2>Front-end Developer</h2>
-            </div>
+            </section>
             <Combee />
             <span>Scroll to enter</span>
         </StyledLandingPage>

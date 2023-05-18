@@ -13,8 +13,6 @@ body {
     font-size: ${({ theme }) => theme.fontSizes.default};
     font-family: 'Marianne-Regular';
 
-    padding: ${({ theme }) => theme.spacing.xl};
-
     * {
         box-sizing: border-box;
     }
@@ -38,6 +36,7 @@ body {
         text-transform: uppercase;
         font-variant-caps: all-small-caps;
         letter-spacing: 0.25rem;
+        color: ${({ theme }) => theme.colors.primary};
     }
 
     h1 {
