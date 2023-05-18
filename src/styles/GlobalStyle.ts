@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ICustomTheme }>`
     font-size: ${({ theme }) => theme.fontSizes.default};
 
     * {
+        font-family: 'Marianne-Regular';
         box-sizing: border-box;
     }
 
@@ -29,6 +30,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ICustomTheme }>`
     h2,
     h3,
     .title {
+        font-family: 'CascadiaCode-Bold';
         text-transform: uppercase;
         font-variant-caps: all-small-caps;
         letter-spacing: 0.25rem;
@@ -47,6 +49,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ICustomTheme }>`
     }
 
     h4 {
+        font-family: 'Marianne-Medium';
         font-size: ${(props) => props.theme.fontSizes.h4};
     }
 `

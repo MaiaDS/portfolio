@@ -1,5 +1,5 @@
 const LandingPage = () => {
-    return <></>
+    return <>test fonts</>
 }
 
 export default LandingPage
