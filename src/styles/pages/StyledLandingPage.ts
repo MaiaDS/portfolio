@@ -23,6 +23,8 @@ export const StyledLandingPage = styled.main`
                     display: inline-block;
                     width: fit-content;
                     transform: rotate(180deg);
+                    margin-left: ${rem(4)};
+                    padding-top: ${rem(1)};
                 }
             }
 
