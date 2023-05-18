@@ -6,7 +6,7 @@ const MainLayout = (props: { children: ReactNode }) => {
     return (
         <StyledMainLayout>
             <Navbar />
-            <main>{props.children}</main>
+            {props.children}
         </StyledMainLayout>
     )
 }
