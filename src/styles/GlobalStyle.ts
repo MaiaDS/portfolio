@@ -2,6 +2,8 @@ import { createGlobalStyle } from 'styled-components'
 import { ICustomTheme } from './utils/theme'
 
 export const GlobalStyle = createGlobalStyle<{ theme: ICustomTheme }>`
+
+body {
     width: 100vw;
     min-height: 100vh;
     overflow: hidden;
@@ -9,9 +11,9 @@ export const GlobalStyle = createGlobalStyle<{ theme: ICustomTheme }>`
     background-color: ${({ theme }) => theme.colors.light};
     color: ${({ theme }) => theme.colors.dark};
     font-size: ${({ theme }) => theme.fontSizes.default};
+    font-family: 'Marianne-Regular';
 
     * {
-        font-family: 'Marianne-Regular';
         box-sizing: border-box;
     }
 
@@ -52,4 +54,6 @@ export const GlobalStyle = createGlobalStyle<{ theme: ICustomTheme }>`
         font-family: 'Marianne-Medium';
         font-size: ${(props) => props.theme.fontSizes.h4};
     }
+}
+    
 `
