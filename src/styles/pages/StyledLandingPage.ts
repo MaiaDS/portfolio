@@ -5,13 +5,34 @@ export const StyledLandingPage = styled.main`
     padding: ${({ theme }) => theme.spacing.xl};
     height: 100vh;
     position: relative;
-
     display: flex;
+
+    svg {
+        position: absolute;
+
+        &:first-of-type {
+            top: ${rem(-50)};
+            right: ${rem(-50)};
+        }
+
+        &:last-of-type {
+            bottom: ${rem(-50)};
+            left: ${rem(-50)};
+        }
+
+        path:nth-child(odd) {
+            fill: ${({ theme }) => theme.colors.secondary};
+        }
+
+        path:nth-child(even) {
+            fill: ${({ theme }) => theme.colors.primary};
+        }
+    }
 
     > div {
         &:first-of-type {
             width: fit-content;
-            /* position: inherit; */
+            position: inherit;
             z-index: 10;
             h1 {
                 font-size: ${rem(125)};
@@ -44,25 +65,17 @@ export const StyledLandingPage = styled.main`
         }
     }
 
-    svg {
+    > span {
         position: absolute;
-
-        &:first-of-type {
-            top: ${rem(-50)};
-            right: ${rem(-50)};
-        }
-
-        &:last-of-type {
-            bottom: ${rem(-50)};
-            left: ${rem(-50)};
-        }
-
-        path:nth-child(odd) {
-            fill: ${({ theme }) => theme.colors.secondary};
-        }
-
-        path:nth-child(even) {
-            fill: ${({ theme }) => theme.colors.primary};
-        }
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: ${({ theme }) => theme.spacing.l};
+        text-transform: uppercase;
+        font-variant: small-caps;
+        color: ${({ theme }) => theme.colors.primary};
+        border-bottom: 2px solid ${({ theme }) => theme.colors.secondary};
+        padding-bottom: ${({ theme }) => theme.spacing.xs};
+        font-size: ${({ theme }) => theme.fontSizes.small};
+        font-family: 'Marianne-Medium';
     }
 `
