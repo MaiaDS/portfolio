@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, hexToRgba, rem } from '../utils/utils'
+import { hexToRgba, rem } from '../utils/utils'
 
 export const StyledReadMe = styled.main`
     display: flex;
