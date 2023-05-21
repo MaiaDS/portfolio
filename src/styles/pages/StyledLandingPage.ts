@@ -18,13 +18,14 @@ export const StyledLandingPage = styled.main`
         &:last-of-type {
             bottom: ${rem(-50)};
             left: ${rem(-50)};
-        }
-
-        path:nth-child(odd) {
-            fill: ${({ theme }) => theme.colors.secondary};
+            transform: scaleY(-1);
         }
 
         path:nth-child(even) {
+            fill: ${({ theme }) => theme.colors.secondary};
+        }
+
+        path:nth-child(odd) {
             fill: ${({ theme }) => theme.colors.primary};
         }
     }
