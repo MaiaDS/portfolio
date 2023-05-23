@@ -5,21 +5,49 @@ export const StyledAboutMe = styled.main`
     > svg {
         position: absolute;
 
-        &:first-of-type {
-            top: ${rem(-125)};
-            left: 20vw;
-        }
-
-        &:last-of-type {
-            right: ${rem(-125)};
-            bottom: ${rem(-50)};
-            transform: scaleY(-1);
-        }
+        top: ${rem(-150)};
+        left: 20vw;
 
         --dropShadowColor: ${({ theme }) => hexToRgba(theme.colors.dark, 0.1)};
         filter: drop-shadow(0px 4px 24px var(--dropShadowColor));
         path {
             fill: ${({ theme }) => theme.colors.light};
+        }
+    }
+
+    > div {
+        position: relative;
+        z-index: 10;
+
+        h1 {
+            margin-bottom: ${({ theme }) => theme.spacing.l};
+        }
+
+        nav {
+            margin-bottom: ${rem(40)};
+
+            ul {
+                display: flex;
+                list-style: none;
+                gap: ${({ theme }) => theme.spacing.xl};
+
+                a {
+                    font-size: ${({ theme }) => theme.fontSizes.h3};
+                    padding-bottom: ${({ theme }) => theme.spacing.xs};
+                    border-bottom: 2px solid transparent;
+                    transition: border-color 0.3s ease-in-out;
+
+                    &.selected {
+                        border-color: ${({ theme }) => theme.colors.secondary};
+                    }
+                }
+            }
+        }
+
+        section {
+            svg {
+                overflow: visible;
+            }
         }
     }
 `
