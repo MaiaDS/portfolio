@@ -4,10 +4,6 @@ import { ICustomTheme } from './utils/theme'
 export const GlobalStyle = createGlobalStyle<{ theme: ICustomTheme }>`
 
 body {
-    width: 100vw;
-    min-height: 100vh;
-    overflow: hidden;
-
     background-color: ${({ theme }) => theme.colors.light};
     color: ${({ theme }) => theme.colors.dark};
     font-size: ${({ theme }) => theme.fontSizes.default};

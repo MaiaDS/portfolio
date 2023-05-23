@@ -2,7 +2,9 @@ import styled from 'styled-components'
 import { rem } from '../utils/utils'
 
 export const StyledLandingPage = styled.main`
+    width: 100vw;
     height: 100vh;
+    overflow: hidden;
     display: flex;
     padding: ${({ theme }) => theme.spacing.xl};
     position: relative;
