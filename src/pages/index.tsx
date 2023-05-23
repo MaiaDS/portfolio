@@ -2,18 +2,22 @@ import { BeehiveSVG } from '@/components/BeehiveSVG'
 import Combee from '@/components/threejs/combee/Combee'
 import { StyledLandingPage } from '@/styles/pages/StyledLandingPage'
 import { useRouter } from 'next/router'
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 
 const LandingPage = () => {
     const router = useRouter()
-    const containerRef = useRef<HTMLElement>(null!)
+
+    const handleWheel = () => {
+        router.push('/readme')
+    }
     useEffect(() => {
-        containerRef.current.addEventListener('wheel', () => {
-            router.push('/readme')
-        })
+        window.addEventListener('wheel', handleWheel)
+        return () => {
+            window.removeEventListener('wheel', handleWheel)
+        }
     }, [])
     return (
-        <StyledLandingPage ref={containerRef}>
+        <StyledLandingPage>
             <BeehiveSVG />
             <BeehiveSVG />
             <section>
