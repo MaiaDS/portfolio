@@ -11,7 +11,8 @@ const Navbar = () => {
         },
         {
             label: 'About.Me',
-            route: '/aboutme'
+            route: '/aboutme',
+            query: 'Skills'
         }
     ]
     return (
@@ -20,7 +21,11 @@ const Navbar = () => {
                 {routes.map((link) => (
                     <li key={link.label}>
                         <Link
-                            href={link.route}
+                            href={
+                                link.query
+                                    ? { pathname: link.route, query: link.query }
+                                    : link.route
+                            }
                             className={router.pathname === link.route ? 'active' : ''}>
                             {link.label}
                         </Link>
