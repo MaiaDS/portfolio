@@ -3,9 +3,6 @@ import styled from 'styled-components'
 
 export const StyledNavbar = styled.nav`
     width: 100%;
-    height: fit-content;
-    padding: ${({ theme }) => theme.spacing.xl};
-    padding-bottom: 0;
 
     ul {
         display: flex;
@@ -19,6 +16,7 @@ export const StyledNavbar = styled.nav`
             letter-spacing: ${rem(4)};
             padding-bottom: ${({ theme }) => theme.spacing.xs};
             border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease-in-out;
 
             &:hover,
             &.active {
