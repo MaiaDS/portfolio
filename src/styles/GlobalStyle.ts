@@ -24,15 +24,17 @@ body {
         display: block;
     }
 
-    h1,
-    h2,
-    h3,
+    h1, h2, h3, h4,
+    .title {
+        color: ${({ theme }) => theme.colors.primary};
+    }
+
+    h1, h2, h3,
     .title {
         font-family: 'CascadiaCode-Bold';
-        text-transform: uppercase;
-        font-variant-caps: all-small-caps;
         letter-spacing: 0.25rem;
-        color: ${({ theme }) => theme.colors.primary};
+        font-variant-caps: all-small-caps;
+        text-transform: uppercase;
     }
 
     h1 {
@@ -48,8 +50,7 @@ body {
     }
 
     h4 {
-        font-family: 'Marianne-Medium';
-        font-size: ${(props) => props.theme.fontSizes.h4};
+        font-family: 'Marianne-Regular';
     }
 }
     

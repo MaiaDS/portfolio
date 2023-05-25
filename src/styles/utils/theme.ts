@@ -5,7 +5,6 @@ export interface ICustomTheme {
         h1: string
         h2: string
         h3: string
-        h4: string
         default: string
         small: string
     }
@@ -30,7 +29,6 @@ export const CustomTheme = {
         h1: rem(40),
         h2: rem(32),
         h3: rem(24),
-        h4: rem(20),
         default: rem(16),
         small: rem(14)
     },
