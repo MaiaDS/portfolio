@@ -1,4 +1,6 @@
 import { BeehiveSVG } from '@/components/BeehiveSVG'
+import Educations from '@/components/educations/Education'
+import Experiences from '@/components/experiences/Experiences'
 import MainLayout from '@/components/layout/MainLayout'
 import Skills from '@/components/skills/Skills'
 import { StyledAboutMe } from '@/styles/pages/StyledAboutMe'
@@ -11,7 +13,7 @@ const AboutMe = () => {
 
     const tabs = ['Skills', 'Experiences', 'Education']
 
-    const selectedTab = query ? Object.keys(router.query)[0] : 'Skills'
+    const selectedTab = query ? Object.keys(router.query)[0] : tabs[0]
 
     const isSelected = (tab: string) => {
         return selectedTab === tab
@@ -29,17 +31,15 @@ const AboutMe = () => {
                                     <Link
                                         href={{ pathname: '/aboutme', query: tab }}
                                         className={`title ${isSelected(tab) ? 'selected' : ''}`}>
-                                        {tab}
+                                        <h2>{tab}</h2>
                                     </Link>
                                 </li>
                             ))}
                         </ul>
                     </nav>
-                    <section>
-                        {selectedTab === 'Skills' && <Skills />}
-                        {selectedTab === 'Experiences' && <p>Experiences</p>}
-                        {selectedTab === 'Education' && <p>Education</p>}
-                    </section>
+                    {selectedTab === tabs[0] && <Skills />}
+                    {selectedTab === tabs[1] && <Experiences />}
+                    {selectedTab === tabs[2] && <Educations />}
                 </div>
                 <BeehiveSVG />
             </StyledAboutMe>
