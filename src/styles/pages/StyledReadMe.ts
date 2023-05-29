@@ -30,7 +30,7 @@ export const StyledReadMe = styled.main`
         }
     }
 
-    > svg {
+    .beehives svg {
         position: absolute;
 
         &:first-of-type {

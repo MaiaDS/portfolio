@@ -1,7 +1,8 @@
 import { BeehiveSVG } from '@/components/BeehiveSVG'
 import MainLayout from '@/components/layout/MainLayout'
+import Bee from '@/components/threejs/bee'
 import { StyledReadMe } from '@/styles/pages/StyledReadMe'
-import { EmailIco, PhoneIco } from '@/utils/Icons'
+import { EmailIco } from '@/utils/Icons'
 
 const ReadMe = () => {
     return (
@@ -38,8 +39,11 @@ const ReadMe = () => {
                         <span>maia.dasilva.12@gmail.com</span>
                     </div>
                 </section>
-                <BeehiveSVG />
-                <BeehiveSVG />
+
+                <div className="beehives">
+                    <BeehiveSVG />
+                    <BeehiveSVG />
+                </div>
             </StyledReadMe>
         </MainLayout>
     )
