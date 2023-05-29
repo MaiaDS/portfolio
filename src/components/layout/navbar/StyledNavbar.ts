@@ -11,17 +11,28 @@ export const StyledNavbar = styled.nav`
         justify-content: end;
 
         a {
-            color: ${({ theme }) => theme.colors.dark};
-            font-family: 'Marianne-Bold';
-            letter-spacing: ${rem(4)};
             padding-bottom: ${({ theme }) => theme.spacing.xs};
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.3s ease-in-out;
 
-            &:hover,
-            &.active {
-                color: ${({ theme }) => theme.colors.primary};
-                border-color: ${({ theme }) => theme.colors.secondary};
+            &:not(.ico) {
+                color: ${({ theme }) => theme.colors.dark};
+                font-family: 'Marianne-Bold';
+                letter-spacing: ${rem(4)};
+                border-bottom: 2px solid transparent;
+                transition: border-color 0.3s ease-in-out;
+
+                &:hover,
+                &.active {
+                    color: ${({ theme }) => theme.colors.primary};
+                    border-color: ${({ theme }) => theme.colors.secondary};
+                }
+            }
+
+            svg path {
+                fill: ${({ theme }) => theme.colors.dark};
+
+                &:hover {
+                    fill: ${({ theme }) => theme.colors.primary};
+                }
             }
         }
     }

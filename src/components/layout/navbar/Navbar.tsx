@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { StyledNavbar } from './StyledNavbar'
+import { LinkedInIco, OpenIco } from '@/utils/Icons'
 
 const Navbar = () => {
     const router = useRouter()
@@ -31,6 +32,19 @@ const Navbar = () => {
                         </Link>
                     </li>
                 ))}
+                <li>
+                    <a
+                        href="https://www.linkedin.com/in/maia-da-silva/"
+                        target="_blank"
+                        className="ico">
+                        <LinkedInIco />
+                    </a>
+                </li>
+                <li>
+                    <a href="/assets/maia_dasilva_resume.pdf" target="_blank" className="ico">
+                        <OpenIco />
+                    </a>
+                </li>
             </ul>
         </StyledNavbar>
     )
