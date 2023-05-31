@@ -5,10 +5,10 @@ import { Suspense } from 'react'
 import { NoToneMapping, Shader } from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
-const Combee = () => {
-    const model = useLoader(GLTFLoader, '/assets/combee.glb')
+const CombeeModel = () => {
+    const model: any = useLoader(GLTFLoader, '/assets/combee.glb')
     const scene = model.scene
-    scene.children = scene.children.filter((child) => child.name !== 'Tail')
+    scene.children = scene.children.filter((child: any) => child.name !== 'Tail')
 
     const onbeforeCompile = (shader: Shader) => {
         shader.vertexShader = shader.vertexShader.replace(
@@ -36,33 +36,27 @@ const Combee = () => {
         )
     }
 
-    console.log(model.nodes.Tail)
+    return (
+        <group rotation={[-0.25, -1, 0]} position={[1.5, -3, 0]} scale={1}>
+            <primitive object={model.scene} />
+            <mesh
+                geometry={model.nodes.Tail.geometry}
+                position={model.nodes.Tail.position}
+                rotation={model.nodes.Tail.rotation}>
+                <meshStandardMaterial color={colors.yellow} onBeforeCompile={onbeforeCompile} />
+            </mesh>
+        </group>
+    )
+}
 
+const Combee = () => {
     return (
         <Canvas gl={{ toneMapping: NoToneMapping }}>
-            <directionalLight castShadow position={[3, 0, 2]} intensity={0.4} />
+            <directionalLight castShadow position={[0, 0, 2]} intensity={0.4} />
             <ambientLight intensity={0.2} />
             <Environment preset="forest" />
             <Suspense fallback={null}>
-                <Center>
-                    <Shadow />
-                    <group>
-                        <primitive
-                            object={model.scene}
-                            // rotation={[0, -1.1, 0.25]}
-                            // position={[1.5, -3.5, 0]}
-                        />
-                        <mesh
-                            geometry={model.nodes.Tail.geometry}
-                            position={model.nodes.Tail.position}
-                            rotation={model.nodes.Tail.rotation}>
-                            <meshStandardMaterial
-                                color={colors.yellow}
-                                onBeforeCompile={onbeforeCompile}
-                            />
-                        </mesh>
-                    </group>
-                </Center>
+                <CombeeModel />
             </Suspense>
         </Canvas>
     )
