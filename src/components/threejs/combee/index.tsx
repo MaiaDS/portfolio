@@ -1,1 +1,1 @@
-export { default } from './Combee'
+export { default } from './CombeeModel'

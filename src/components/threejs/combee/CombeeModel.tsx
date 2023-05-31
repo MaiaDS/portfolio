@@ -1,8 +1,6 @@
 import { colors } from '@/styles/utils/utils'
-import { Center, Environment, Shadow } from '@react-three/drei'
-import { Canvas, useLoader } from '@react-three/fiber'
-import { Suspense } from 'react'
-import { NoToneMapping, Shader } from 'three'
+import { useLoader } from '@react-three/fiber'
+import { Shader } from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 const CombeeModel = () => {
@@ -49,17 +47,4 @@ const CombeeModel = () => {
     )
 }
 
-const Combee = () => {
-    return (
-        <Canvas gl={{ toneMapping: NoToneMapping }}>
-            <directionalLight castShadow position={[0, 0, 2]} intensity={0.4} />
-            <ambientLight intensity={0.2} />
-            <Environment preset="forest" />
-            <Suspense fallback={null}>
-                <CombeeModel />
-            </Suspense>
-        </Canvas>
-    )
-}
-
-export default Combee
+export default CombeeModel

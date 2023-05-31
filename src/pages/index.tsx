@@ -1,8 +1,10 @@
 import { BeehiveSVG } from '@/components/BeehiveSVG'
-import Combee from '@/components/threejs/combee/Combee'
+import ThreejsCanvas from '@/components/threejs/ThreejsCanvas'
+import CombeeModel from '@/components/threejs/combee/CombeeModel'
 import { StyledLandingPage } from '@/styles/pages/StyledLandingPage'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
+import { Vector3 } from 'three'
 
 const LandingPage = () => {
     const router = useRouter()
@@ -27,7 +29,12 @@ const LandingPage = () => {
                 </h1>
                 <h2>Front-end Developer</h2>
             </section>
-            <Combee />
+            <ThreejsCanvas
+                directionnalLightPosition={new Vector3(0, 0, 2)}
+                directionnalLightIntensity={0.4}
+                ambientLightIntensity={0.2}>
+                <CombeeModel />
+            </ThreejsCanvas>
             <span>Scroll to enter</span>
         </StyledLandingPage>
     )
