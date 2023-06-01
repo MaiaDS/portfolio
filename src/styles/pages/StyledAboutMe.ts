@@ -25,6 +25,8 @@ export const StyledAboutMe = styled.main`
 
         nav {
             margin-bottom: ${rem(40)};
+            position: relative;
+            z-index: 20;
 
             ul {
                 display: flex;

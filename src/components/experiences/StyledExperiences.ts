@@ -22,4 +22,11 @@ export const StyledExperiences = styled.section`
             }
         }
     }
+
+    .threejs {
+        height: 100vh !important;
+        position: fixed !important;
+        bottom: 0;
+        right: 0;
+    }
 `
