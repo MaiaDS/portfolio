@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 export const StyledNavbar = styled.nav`
     width: 100%;
+    position: relative;
+    z-index: 20;
 
     ul {
         display: flex;

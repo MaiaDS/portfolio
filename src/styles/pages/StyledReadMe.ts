@@ -51,4 +51,10 @@ export const StyledReadMe = styled.main`
             fill: ${({ theme }) => theme.colors.light};
         }
     }
+
+    .threejs {
+        position: absolute !important;
+        bottom: 0;
+        right: 0;
+    }
 `

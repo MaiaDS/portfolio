@@ -1,4 +1,3 @@
-import { rem } from '@/styles/utils/utils'
 import styled from 'styled-components'
 
 export const StyledMainLayout = styled.div`
