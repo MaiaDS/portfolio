@@ -25,13 +25,6 @@ export interface ICustomTheme {
 }
 
 export const CustomTheme = {
-    fontSizes: {
-        h1: rem(40),
-        h2: rem(32),
-        h3: rem(24),
-        default: rem(16),
-        small: rem(14)
-    },
     spacing: {
         xs: rem(10),
         s: rem(15),
@@ -46,4 +39,26 @@ export const CustomTheme = {
         light: colors.lightGrey
     },
     borderRadius: `6px`
+}
+
+export const CustomDesktopTheme = {
+    ...CustomTheme,
+    fontSizes: {
+        h1: rem(40),
+        h2: rem(32),
+        h3: rem(24),
+        default: rem(16),
+        small: rem(14)
+    }
+}
+
+export const CustomMobileTheme = {
+    ...CustomTheme,
+    fontSizes: {
+        h1: rem(32),
+        h2: rem(24),
+        h3: rem(20),
+        default: rem(14),
+        small: rem(12)
+    }
 }
