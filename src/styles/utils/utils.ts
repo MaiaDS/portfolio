@@ -43,3 +43,8 @@ export const Fonts = createGlobalStyle`
             url('/fonts/Marianne-Bold.woff2') format('woff2');
     }
 `
+
+export const responsive = {
+    mobileMediaQuery: 'screen and (max-width: 769px)',
+    desktopMediaQuery: 'screen and (min-width: 769px)'
+}

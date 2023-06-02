@@ -2,9 +2,10 @@ import { BeehiveSVG } from '@/components/BeehiveSVG'
 import ThreejsCanvas from '@/components/threejs/ThreejsCanvas'
 import CombeeModel from '@/components/threejs/combeeModel/CombeeModel'
 import { StyledLandingPage } from '@/styles/pages/StyledLandingPage'
+import { useCustomThemeContext } from '@/utils/CustomTheme'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
-import { Vector3 } from 'three'
 
 const LandingPage = () => {
     const router = useRouter()
@@ -12,6 +13,9 @@ const LandingPage = () => {
     const handleWheel = () => {
         router.push('/readme')
     }
+
+    const { theme } = useCustomThemeContext()
+
     useEffect(() => {
         window.addEventListener('wheel', handleWheel)
         return () => {
@@ -21,7 +25,8 @@ const LandingPage = () => {
     return (
         <StyledLandingPage>
             <BeehiveSVG />
-            <BeehiveSVG />
+            {theme === 'desktop' && <BeehiveSVG />}
+            <Link href="/readme">{theme === 'desktop' && 'Scroll to'} enter</Link>
             <section>
                 <h1>
                     Ma<span>ï</span>a
@@ -32,7 +37,6 @@ const LandingPage = () => {
             <ThreejsCanvas>
                 <CombeeModel />
             </ThreejsCanvas>
-            <span>Scroll to enter</span>
         </StyledLandingPage>
     )
 }
