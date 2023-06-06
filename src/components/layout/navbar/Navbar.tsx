@@ -1,7 +1,12 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { StyledNavbar } from './StyledNavbar'
-import { LinkedInIco, OpenIco } from '@/utils/Icons'
+import { CloseIco, LinkedInIco, MenuIco, OpenIco } from '@/utils/Icons'
+import { useCustomThemeContext } from '@/utils/CustomTheme'
+import { useState, useEffect } from 'react'
+import ThreejsCanvas from '@/components/threejs'
+import ChubbeeModel from '@/components/threejs/chubbeeModel'
+import { Vector3 } from 'three'
 
 const Navbar = () => {
     const router = useRouter()
@@ -16,34 +21,76 @@ const Navbar = () => {
             query: 'Skills'
         }
     ]
+
+    const { theme } = useCustomThemeContext()
+    const [isMenuHidden, setIsMenuHidden] = useState(false)
+
+    useEffect(() => {
+        if (theme === 'mobile') {
+            setIsMenuHidden(true)
+        }
+    }, [])
+
+    const handleClick = () => {
+        setIsMenuHidden(!isMenuHidden)
+    }
+
     return (
-        <StyledNavbar>
+        <StyledNavbar className={isMenuHidden ? 'hidden' : 'visible'}>
+            {theme === 'mobile' && !isMenuHidden && (
+                <ThreejsCanvas
+                    cameraProps={{
+                        fov: 25,
+                        near: 0.1,
+                        far: 50,
+                        position: new Vector3(0, -0.5, 20)
+                    }}>
+                    <ChubbeeModel bees={[new Vector3(0, 3, -5), new Vector3(-1, 1, 5)]} />
+                </ThreejsCanvas>
+            )}
+            {theme === 'mobile' && (
+                <button onClick={handleClick}>{isMenuHidden ? <MenuIco /> : <CloseIco />}</button>
+            )}
             <ul>
-                {routes.map((link) => (
-                    <li key={link.label}>
-                        <Link
-                            href={
-                                link.query
-                                    ? { pathname: link.route, query: link.query }
-                                    : link.route
-                            }
-                            className={router.pathname === link.route ? 'active' : ''}>
-                            {link.label}
-                        </Link>
-                    </li>
-                ))}
                 <li>
-                    <a
-                        href="https://www.linkedin.com/in/maia-da-silva/"
-                        target="_blank"
-                        className="ico">
-                        <LinkedInIco />
-                    </a>
+                    <ul>
+                        {routes.map((link) => (
+                            <li key={link.label}>
+                                <Link
+                                    href={
+                                        link.query
+                                            ? { pathname: link.route, query: link.query }
+                                            : link.route
+                                    }
+                                    onClick={handleClick}
+                                    className={router.pathname === link.route ? 'active' : ''}>
+                                    {link.label}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
                 </li>
                 <li>
-                    <a href="/assets/maia_dasilva_resume.pdf" target="_blank" className="ico">
-                        <OpenIco />
-                    </a>
+                    <ul>
+                        <li>
+                            <a
+                                href="https://www.linkedin.com/in/maia-da-silva/"
+                                onClick={handleClick}
+                                target="_blank"
+                                className="ico">
+                                <LinkedInIco />
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/assets/maia_dasilva_resume.pdf"
+                                onClick={handleClick}
+                                target="_blank"
+                                className="ico">
+                                <OpenIco />
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </StyledNavbar>
