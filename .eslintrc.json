@@ -17,5 +17,9 @@
         "project": ["./tsconfig.json"]
     },
     "plugins": [],
-    "rules": {}
+    "rules": {
+        "no-unused-vars": 1,
+        "unused-imports/no-unused-imports": "warning",
+        "no-console": 1
+    }
 }
