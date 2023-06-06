@@ -22,6 +22,11 @@ export const colors = {
 }
 
 export const Fonts = createGlobalStyle`
+@font-face {
+        font-family: 'CascadiaCode-Regular';
+        src: url('/fonts/CascadiaCode-Regular.otf') format('otf'),
+            url('/fonts/CascadiaCode-Regular.woff2') format('woff2');
+    }
     @font-face {
         font-family: 'CascadiaCode-Bold';
         src: url('/fonts/CascadiaCode-Bold.otf') format('otf'),
