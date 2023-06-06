@@ -56,8 +56,8 @@ export const StyledLandingPage = styled.main`
         color: ${({ theme }) => theme.colors.primary};
         border-bottom: 2px solid ${({ theme }) => theme.colors.secondary};
         padding-bottom: ${({ theme }) => theme.spacing.xs};
-        font-size: ${({ theme }) => theme.fontSizes.small};
-        font-family: 'Marianne-Medium';
+        font-size: ${({ theme }) => theme.fonts.sizes.small};
+        font-family: ${({ theme }) => theme.fonts.families.primary.medium};
 
         @media ${responsive.mobileMediaQuery} {
             position: inherit;
@@ -78,6 +78,7 @@ export const StyledLandingPage = styled.main`
             width: min-content;
             margin: 0 auto;
         }
+
         h1 {
             font-size: ${rem(125)};
             letter-spacing: ${rem(-4)};
@@ -101,7 +102,7 @@ export const StyledLandingPage = styled.main`
 
         h2 {
             padding-left: ${rem(5)};
-            font-size: ${({ theme }) => theme.fontSizes.h1};
+            font-size: ${({ theme }) => theme.fonts.sizes.h1};
             letter-spacing: ${rem(13.5)};
             text-align: justify;
             text-justify: inter-character;
