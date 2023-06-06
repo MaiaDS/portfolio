@@ -106,7 +106,7 @@ export const StyledNavbar = styled.nav`
                 position: absolute;
                 left: 50%;
                 transform: translateX(-50%);
-                bottom: 8vh;
+                bottom: 9%;
             }
         }
     }

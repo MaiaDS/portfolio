@@ -51,7 +51,7 @@ const Navbar = () => {
                 </ThreejsCanvas>
             )}
             {theme === ScreenFormats.PORTRAIT && (
-                <button onClick={handleClick}>{isMenuHidden ? <MenuIco /> : <CloseIco />}</button>
+                <button onClick={handleClick}>{isMenuHidden && <MenuIco />}</button>
             )}
             <ul>
                 <li>
