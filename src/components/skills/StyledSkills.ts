@@ -19,7 +19,7 @@ export const StyledSkills = styled.svg`
         fill: ${({ theme }) => theme.colors.dark};
     }
 
-    .strokes line {
+    .strokes path {
         stroke: ${({ theme }) => theme.colors.secondary};
     }
 `
