@@ -1,4 +1,4 @@
-import { useCustomThemeContext } from '@/utils/CustomTheme'
+import { ScreenFormats, useCustomThemeContext } from '@/utils/CustomTheme'
 import { StyledExperiences } from './StyledExperiences'
 import { EXPERIENCES } from './data'
 
@@ -12,16 +12,16 @@ const Experiences = () => {
                         {experience.position}
                         {experience.type && (
                             <>
-                                {theme === 'desktop' ? ' | ' : <br />}
+                                {theme === ScreenFormats.LANDSCAPE ? ' | ' : <br />}
                                 <small>{`(${experience.type})`}</small>
                             </>
                         )}
-                        {theme === 'desktop' ? ' | ' : <br />}
+                        {theme === ScreenFormats.LANDSCAPE ? ' | ' : <br />}
                         {experience.company}
                     </h3>
                     <h4>
                         {experience.dates}
-                        {theme === 'desktop' ? ' | ' : <br />}
+                        {theme === ScreenFormats.LANDSCAPE ? ' | ' : <br />}
                         {experience.location}
                     </h4>
                     <ul>

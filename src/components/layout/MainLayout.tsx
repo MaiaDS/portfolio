@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import { StyledMainLayout } from './StyledMainLayout'
 import Navbar from './navbar/Navbar'
-import { useCustomThemeContext } from '@/utils/CustomTheme'
+import { ScreenFormats, useCustomThemeContext } from '@/utils/CustomTheme'
 import { Vector3 } from 'three'
 import ThreejsCanvas from '../threejs'
 import ChubbeeModel from '../threejs/chubbeeModel'
@@ -12,7 +12,7 @@ const MainLayout = (props: { children: ReactNode; bees: Vector3[] }) => {
         <StyledMainLayout>
             <Navbar />
             {props.children}
-            {props.bees.length !== 0 && theme === 'desktop' && (
+            {props.bees.length !== 0 && theme === ScreenFormats.LANDSCAPE && (
                 <ThreejsCanvas
                     cameraProps={{
                         fov: 25,

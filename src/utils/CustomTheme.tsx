@@ -2,24 +2,28 @@ import { CustomMobileTheme, CustomTheme } from '@/styles/utils/theme'
 import { ReactNode, createContext, useContext, useEffect, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 
+export enum ScreenFormats {
+    LANDSCAPE,
+    PORTRAIT
+}
+
 const CustomThemeContext = createContext({
-    theme: 'desktop',
+    theme: ScreenFormats.LANDSCAPE,
     updateTheme: () => {}
 })
 
 export const useCustomThemeContext = () => useContext(CustomThemeContext)
 
 export const CustomThemeProvider = (props: { children: ReactNode }) => {
-    const [theme, setTheme] = useState('desktop')
+    const [theme, setTheme] = useState(ScreenFormats.LANDSCAPE)
     const updateTheme = () => {
-        let value = 'desktop'
-        if (theme !== 'desktop' && window.innerWidth > 768) {
-            value = 'desktop'
-        } else if (theme !== 'mobile' && window.innerWidth < 769) {
-            value = 'mobile'
+        if (window.innerWidth < 1024) {
+            screen.orientation.lock('portrait')
+            setTheme(ScreenFormats.PORTRAIT)
+        } else {
+            screen.orientation.lock('landscape')
+            setTheme(ScreenFormats.LANDSCAPE)
         }
-        setTheme(value)
-        window.localStorage.setItem('maiadasilva', value)
     }
     useEffect(() => {
         updateTheme()
@@ -28,7 +32,7 @@ export const CustomThemeProvider = (props: { children: ReactNode }) => {
         })
     }, [])
 
-    const themeFile = theme === 'desktop' ? CustomTheme : CustomMobileTheme
+    const themeFile = theme === ScreenFormats.LANDSCAPE ? CustomTheme : CustomMobileTheme
 
     return (
         <CustomThemeContext.Provider value={{ theme, updateTheme }}>

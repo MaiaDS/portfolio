@@ -1,7 +1,7 @@
 import { BeehiveSVG } from '@/components/BeehiveSVG'
 import MainLayout from '@/components/layout/MainLayout'
 import { StyledReadMe } from '@/styles/pages/StyledReadMe'
-import { useCustomThemeContext } from '@/utils/CustomTheme'
+import { ScreenFormats, useCustomThemeContext } from '@/utils/CustomTheme'
 import { EmailIco } from '@/utils/Icons'
 import { Vector3 } from 'three'
 
@@ -55,7 +55,7 @@ const ReadMe = () => {
                     </div>
                 </section>
 
-                {theme === 'desktop' && (
+                {theme === ScreenFormats.LANDSCAPE && (
                     <div className="beehives">
                         <BeehiveSVG />
                         <BeehiveSVG />

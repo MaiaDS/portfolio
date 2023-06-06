@@ -1,7 +1,7 @@
 import ThreejsCanvas from '@/components/threejs'
 import ChubbeeModel from '@/components/threejs/chubbeeModel'
 import { StyledError } from '@/styles/pages/StyledError'
-import { useCustomThemeContext } from '@/utils/CustomTheme'
+import { ScreenFormats, useCustomThemeContext } from '@/utils/CustomTheme'
 import { DebugIco } from '@/utils/Icons'
 import Error from 'next/error'
 import Link from 'next/link'
@@ -20,7 +20,7 @@ const ErrorPage = (props: { errorCode: number | false }) => {
     const { theme } = useCustomThemeContext()
 
     const bees =
-        theme === 'desktop'
+        theme === ScreenFormats.LANDSCAPE
             ? [
                   new Vector3(-2.5, -3, 12),
                   new Vector3(4, -3, 10),

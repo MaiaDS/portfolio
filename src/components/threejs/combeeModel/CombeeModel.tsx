@@ -4,15 +4,15 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { colors } from '@/styles/utils/utils'
 import { beeStripesShader } from '../shaders/beeShader'
 import { Float } from '@react-three/drei'
-import { useCustomThemeContext } from '@/utils/CustomTheme'
+import { ScreenFormats, useCustomThemeContext } from '@/utils/CustomTheme'
 
 const CombeeModel = () => {
     const model: any = useLoader(GLTFLoader, '/assets/combee.glb')
     const scene = model.scene
     scene.children = scene.children.filter((child: any) => child.name !== 'Tail')
     const { theme } = useCustomThemeContext()
-    const positionX = theme === 'mobile' ? 1 : 1.5
-    const scale = theme === 'mobile' ? 1 : 1
+    const positionX = theme === ScreenFormats.PORTRAIT ? 1 : 1.5
+    const scale = theme === ScreenFormats.PORTRAIT ? 1 : 1
     return (
         <Float rotationIntensity={0.1} speed={4}>
             <group

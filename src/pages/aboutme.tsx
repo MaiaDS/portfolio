@@ -4,7 +4,7 @@ import Experiences from '@/components/experiences/Experiences'
 import MainLayout from '@/components/layout/MainLayout'
 import Skills from '@/components/skills'
 import { StyledAboutMe } from '@/styles/pages/StyledAboutMe'
-import { useCustomThemeContext } from '@/utils/CustomTheme'
+import { ScreenFormats, useCustomThemeContext } from '@/utils/CustomTheme'
 import { EducationIco, ExperiencesIco, SkillsIco } from '@/utils/Icons'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -78,7 +78,7 @@ const AboutMe = () => {
                                     <Link
                                         href={{ pathname: '/aboutme', query: tab.label }}
                                         className={isSelected(tab.label) ? 'selected' : ''}>
-                                        {theme === 'mobile' && <span>{tab.ico}</span>}
+                                        {theme === ScreenFormats.PORTRAIT && <span>{tab.ico}</span>}
 
                                         <h2>{tab.label}</h2>
                                     </Link>
@@ -88,7 +88,7 @@ const AboutMe = () => {
                     </nav>
                     {getComponent()}
                 </div>
-                {theme === 'desktop' && <BeehiveSVG />}
+                {theme === ScreenFormats.LANDSCAPE && <BeehiveSVG />}
             </StyledAboutMe>
         </MainLayout>
     )

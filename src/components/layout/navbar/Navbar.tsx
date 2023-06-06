@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { StyledNavbar } from './StyledNavbar'
 import { CloseIco, LinkedInIco, MenuIco, OpenIco } from '@/utils/Icons'
-import { useCustomThemeContext } from '@/utils/CustomTheme'
+import { ScreenFormats, useCustomThemeContext } from '@/utils/CustomTheme'
 import { useState, useEffect } from 'react'
 import ThreejsCanvas from '@/components/threejs'
 import ChubbeeModel from '@/components/threejs/chubbeeModel'
@@ -26,10 +26,12 @@ const Navbar = () => {
     const [isMenuHidden, setIsMenuHidden] = useState(false)
 
     useEffect(() => {
-        if (theme === 'mobile') {
+        if (theme === ScreenFormats.PORTRAIT) {
             setIsMenuHidden(true)
+        } else {
+            setIsMenuHidden(false)
         }
-    }, [])
+    }, [theme])
 
     const handleClick = () => {
         setIsMenuHidden(!isMenuHidden)
@@ -37,7 +39,7 @@ const Navbar = () => {
 
     return (
         <StyledNavbar className={isMenuHidden ? 'hidden' : 'visible'}>
-            {theme === 'mobile' && !isMenuHidden && (
+            {theme === ScreenFormats.PORTRAIT && !isMenuHidden && (
                 <ThreejsCanvas
                     cameraProps={{
                         fov: 25,
@@ -48,7 +50,7 @@ const Navbar = () => {
                     <ChubbeeModel bees={[new Vector3(0, 3, -5), new Vector3(-1, 1, 5)]} />
                 </ThreejsCanvas>
             )}
-            {theme === 'mobile' && (
+            {theme === ScreenFormats.PORTRAIT && (
                 <button onClick={handleClick}>{isMenuHidden ? <MenuIco /> : <CloseIco />}</button>
             )}
             <ul>
