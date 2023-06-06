@@ -111,6 +111,11 @@ export const StyledAboutMe = styled.main`
                 @media ${responsiveMediaQueries.desktop} {
                     margin-left: ${rem(-20)};
                 }
+
+                @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+                    transform: scale(0.7);
+                    margin-left: ${rem(-220)};
+                }
             }
         }
     }
