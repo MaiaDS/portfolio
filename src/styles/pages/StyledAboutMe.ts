@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { hexToRgba, rem } from '../utils/utils'
+import { hexToRgba, rem, responsive } from '../utils/utils'
 
 export const StyledAboutMe = styled.main`
     > svg {
@@ -16,31 +16,89 @@ export const StyledAboutMe = styled.main`
     }
 
     > div {
-        position: relative;
-        z-index: 10;
-
         h1 {
             margin-bottom: ${({ theme }) => theme.spacing.l};
         }
 
         nav {
-            margin-bottom: ${rem(40)};
+            margin-bottom: ${rem(25)};
             position: relative;
-            z-index: 20;
+            z-index: 25;
+
+            @media ${responsive.mobileMediaQuery} {
+                z-index: 0;
+            }
 
             ul {
                 display: flex;
                 list-style: none;
                 gap: ${({ theme }) => theme.spacing.xl};
 
+                @media ${responsive.mobileMediaQuery} {
+                    justify-content: space-between;
+                    gap: unset;
+                }
+
                 a {
-                    font-size: ${({ theme }) => theme.fontSizes.h3};
                     padding-bottom: ${({ theme }) => theme.spacing.xs};
                     border-bottom: 2px solid transparent;
                     transition: border-color 0.3s ease-in-out;
 
+                    h2 {
+                        font-size: ${({ theme }) => theme.fonts.sizes.h3};
+
+                        @media ${responsive.mobileMediaQuery} {
+                            font-size: ${({ theme }) => theme.fonts.sizes.default};
+                            font-family: ${({ theme }) => theme.fonts.families.secondary.regular};
+                            color: ${({ theme }) => theme.colors.primary};
+                        }
+                    }
+
                     &.selected {
                         border-color: ${({ theme }) => theme.colors.secondary};
+                    }
+
+                    @media ${responsive.mobileMediaQuery} {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: ${({ theme }) => theme.spacing.xs};
+                        border: none;
+                        padding-bottom: 0;
+                        width: ${rem(80)};
+
+                        span {
+                            background-color: ${({ theme }) => theme.colors.primary};
+                            width: ${rem(50)};
+                            height: ${rem(55)};
+                            clip-path: polygon(
+                                0% 25%,
+                                0% 75%,
+                                50% 100%,
+                                100% 75%,
+                                100% 25%,
+                                50% 0%
+                            );
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            svg path {
+                                fill: ${({ theme }) => theme.colors.light};
+                            }
+                        }
+
+                        &.selected {
+                            h2 {
+                                color: ${({ theme }) => theme.colors.dark};
+                            }
+                            span {
+                                background-color: ${({ theme }) => theme.colors.secondary};
+                                svg path {
+                                    fill: ${({ theme }) => theme.colors.dark};
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -49,6 +107,10 @@ export const StyledAboutMe = styled.main`
         section {
             svg {
                 overflow: visible;
+
+                @media ${responsive.desktopMediaQuery} {
+                    margin-left: ${rem(-20)};
+                }
             }
         }
     }
