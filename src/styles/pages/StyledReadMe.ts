@@ -1,10 +1,14 @@
 import styled from 'styled-components'
-import { hexToRgba, rem } from '../utils/utils'
+import { hexToRgba, rem, responsive } from '../utils/utils'
 
 export const StyledReadMe = styled.main`
     display: flex;
     flex-direction: column;
     gap: ${({ theme }) => theme.spacing.xl};
+
+    @media ${responsive.mobileMediaQuery} {
+        gap: ${({ theme }) => theme.spacing.l};
+    }
 
     section {
         display: flex;
@@ -15,6 +19,10 @@ export const StyledReadMe = styled.main`
             max-width: 75%;
             &:not(:last-of-type) {
                 margin-bottom: ${({ theme }) => theme.spacing.s};
+            }
+
+            @media ${responsive.mobileMediaQuery} {
+                max-width: 100%;
             }
         }
 
@@ -50,11 +58,5 @@ export const StyledReadMe = styled.main`
         path {
             fill: ${({ theme }) => theme.colors.light};
         }
-    }
-
-    .threejs {
-        position: absolute !important;
-        bottom: 0;
-        right: 0;
     }
 `
