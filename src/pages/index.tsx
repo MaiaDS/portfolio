@@ -9,12 +9,11 @@ import { useEffect } from 'react'
 
 const LandingPage = () => {
     const router = useRouter()
+    const { theme } = useCustomThemeContext()
 
     const handleWheel = () => {
         router.push('/readme')
     }
-
-    const { theme } = useCustomThemeContext()
 
     useEffect(() => {
         window.addEventListener('wheel', handleWheel)
@@ -22,6 +21,7 @@ const LandingPage = () => {
             window.removeEventListener('wheel', handleWheel)
         }
     }, [])
+
     return (
         <StyledLandingPage>
             <BeehiveSVG />
