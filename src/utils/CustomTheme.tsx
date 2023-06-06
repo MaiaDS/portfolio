@@ -1,4 +1,4 @@
-import { CustomDesktopTheme, CustomMobileTheme } from '@/styles/utils/theme'
+import { CustomMobileTheme, CustomTheme } from '@/styles/utils/theme'
 import { ReactNode, createContext, useContext, useEffect, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 
@@ -28,8 +28,8 @@ export const CustomThemeProvider = (props: { children: ReactNode }) => {
         })
     }, [])
 
-    const themeFile = theme === 'desktop' ? CustomDesktopTheme : CustomMobileTheme
-    console.log(themeFile)
+    const themeFile = theme === 'desktop' ? CustomTheme : CustomMobileTheme
+
     return (
         <CustomThemeContext.Provider value={{ theme, updateTheme }}>
             <ThemeProvider theme={themeFile}>{props.children}</ThemeProvider>
