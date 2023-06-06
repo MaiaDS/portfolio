@@ -1,3 +1,4 @@
+import { responsive } from '@/styles/utils/utils'
 import styled from 'styled-components'
 
 export const StyledExperiences = styled.section`
@@ -5,9 +6,32 @@ export const StyledExperiences = styled.section`
     flex-direction: column;
     gap: ${({ theme }) => theme.spacing.l};
     article {
+        h3 {
+            position: relative;
+            z-index: 10;
+        }
+
         &:first-of-type {
-            border: 1px solid ${({ theme }) => theme.colors.secondary};
             padding: ${({ theme }) => theme.spacing.m};
+            position: relative;
+
+            &::before {
+                border: 2px solid ${({ theme }) => theme.colors.secondary};
+                width: 100%;
+                height: 100%;
+                content: '';
+                position: absolute;
+                z-index: 0;
+                inset: 0;
+                left: 50%;
+                transform: translateX(-50%);
+
+                @media ${responsive.mobileMediaQuery} {
+                    width: 100vw;
+                    height: 92%;
+                    top: 8%;
+                }
+            }
         }
 
         ul {
@@ -16,17 +40,15 @@ export const StyledExperiences = styled.section`
             display: flex;
             flex-direction: column;
             gap: ${({ theme }) => theme.spacing.s};
+
+            @media ${responsive.mobileMediaQuery} {
+                max-width: 100%;
+            }
+
             li {
                 list-style-image: url('/assets/hexagon.svg');
                 list-style-position: inside;
             }
         }
-    }
-
-    .threejs {
-        height: 100vh !important;
-        position: fixed !important;
-        bottom: 0;
-        right: 0;
     }
 `
