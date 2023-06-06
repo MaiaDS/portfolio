@@ -14,7 +14,7 @@ const CombeeModel = () => {
     const positionX = theme === 'mobile' ? 1 : 1.5
     const scale = theme === 'mobile' ? 1 : 1
     return (
-        <Float rotationIntensity={0.1} speed={0.75}>
+        <Float rotationIntensity={0.1} speed={4}>
             <group
                 rotation={new Euler(-0.25, -1, 0)}
                 position={new Vector3(positionX, -3, 0)}
