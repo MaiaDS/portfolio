@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { rem, responsive } from '../utils/utils'
+import { rem, responsiveMediaQueries } from '../utils/utils'
 
 export const StyledError = styled.main`
     width: 100vw;
@@ -14,7 +14,7 @@ export const StyledError = styled.main`
     gap: ${({ theme }) => theme.spacing.xl};
     position: relative;
 
-    @media ${responsive.mobileMediaQuery} {
+    @media ${responsiveMediaQueries.mobile} {
         justify-content: end;
         h2 {
             text-align: center;
@@ -30,7 +30,7 @@ export const StyledError = styled.main`
         border-right: 4px solid ${({ theme }) => theme.colors.secondary};
         vertical-align: middle !important;
 
-        @media ${responsive.mobileMediaQuery} {
+        @media ${responsiveMediaQueries.mobile} {
             font-size: ${rem(75)} !important;
             border: none;
             padding: 0 !important;

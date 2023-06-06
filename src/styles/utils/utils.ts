@@ -44,7 +44,7 @@ export const Fonts = createGlobalStyle`
     }
 `
 
-export const responsive = {
-    mobileMediaQuery: '(orientation: portrait)',
-    desktopMediaQuery: '(orientation: landscape)'
+export const responsiveMediaQueries = {
+    mobile: '(orientation: portrait)',
+    desktop: '(orientation: landscape)'
 }

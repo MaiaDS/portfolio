@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import { hexToRgba, rem, responsive } from '../utils/utils'
+import { hexToRgba, rem, responsiveMediaQueries } from '../utils/utils'
 
 export const StyledReadMe = styled.main`
     display: flex;
     flex-direction: column;
     gap: ${({ theme }) => theme.spacing.xl};
 
-    @media ${responsive.mobileMediaQuery} {
+    @media ${responsiveMediaQueries.mobile} {
         gap: ${({ theme }) => theme.spacing.l};
     }
 
@@ -21,7 +21,7 @@ export const StyledReadMe = styled.main`
                 margin-bottom: ${({ theme }) => theme.spacing.s};
             }
 
-            @media ${responsive.mobileMediaQuery} {
+            @media ${responsiveMediaQueries.mobile} {
                 max-width: 100%;
             }
         }

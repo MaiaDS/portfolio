@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { rem, responsive } from '../utils/utils'
+import { rem, responsiveMediaQueries } from '../utils/utils'
 
 export const StyledLandingPage = styled.main`
     width: 100%;
@@ -9,7 +9,7 @@ export const StyledLandingPage = styled.main`
     padding: ${({ theme }) => theme.spacing.xl};
     position: relative;
 
-    @media ${responsive.mobileMediaQuery} {
+    @media ${responsiveMediaQueries.mobile} {
         flex-direction: column-reverse;
         padding: ${({ theme }) => theme.spacing.m};
     }
@@ -21,7 +21,7 @@ export const StyledLandingPage = styled.main`
             top: ${rem(-50)};
             right: ${rem(-50)};
 
-            @media ${responsive.mobileMediaQuery} {
+            @media ${responsiveMediaQueries.mobile} {
                 top: ${rem(-200)};
                 right: ${rem(-100)};
                 scale: 0.9;
@@ -29,7 +29,7 @@ export const StyledLandingPage = styled.main`
             }
         }
 
-        @media ${responsive.desktopMediaQuery} {
+        @media ${responsiveMediaQueries.desktop} {
             &:last-of-type {
                 bottom: ${rem(-50)};
                 left: ${rem(-50)};
@@ -59,7 +59,7 @@ export const StyledLandingPage = styled.main`
         font-size: ${({ theme }) => theme.fonts.sizes.small};
         font-family: ${({ theme }) => theme.fonts.families.primary.medium};
 
-        @media ${responsive.mobileMediaQuery} {
+        @media ${responsiveMediaQueries.mobile} {
             position: inherit;
             bottom: unset;
             left: unset;
@@ -74,7 +74,7 @@ export const StyledLandingPage = styled.main`
         position: inherit;
         z-index: 10;
 
-        @media ${responsive.mobileMediaQuery} {
+        @media ${responsiveMediaQueries.mobile} {
             width: min-content;
             margin: 0 auto;
         }
@@ -86,7 +86,7 @@ export const StyledLandingPage = styled.main`
             font-variant-caps: normal;
             color: ${({ theme }) => theme.colors.dark};
 
-            @media ${responsive.mobileMediaQuery} {
+            @media ${responsiveMediaQueries.mobile} {
                 font-size: ${rem(65)};
                 line-height: ${rem(50)};
             }
@@ -107,7 +107,7 @@ export const StyledLandingPage = styled.main`
             text-align: justify;
             text-justify: inter-character;
 
-            @media ${responsive.mobileMediaQuery} {
+            @media ${responsiveMediaQueries.mobile} {
                 line-height: ${rem(25)};
                 letter-spacing: ${rem(19)};
             }

@@ -1,4 +1,4 @@
-import { responsive } from '@/styles/utils/utils'
+import { responsiveMediaQueries } from '@/styles/utils/utils'
 import styled from 'styled-components'
 
 export const StyledMainLayout = styled.div`
@@ -8,7 +8,7 @@ export const StyledMainLayout = styled.div`
     overflow: hidden;
     position: relative;
 
-    @media ${responsive.mobileMediaQuery} {
+    @media ${responsiveMediaQueries.mobile} {
         padding: ${({ theme }) => theme.spacing.l};
 
         main {

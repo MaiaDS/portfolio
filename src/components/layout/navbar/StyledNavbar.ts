@@ -1,4 +1,4 @@
-import { rem, responsive } from '@/styles/utils/utils'
+import { rem, responsiveMediaQueries } from '@/styles/utils/utils'
 import styled from 'styled-components'
 
 export const StyledNavbar = styled.nav`
@@ -65,7 +65,7 @@ export const StyledNavbar = styled.nav`
                         border-color: ${({ theme }) => theme.colors.secondary};
                     }
 
-                    @media ${responsive.mobileMediaQuery} {
+                    @media ${responsiveMediaQueries.mobile} {
                         text-transform: uppercase;
                     }
                 }
@@ -80,7 +80,7 @@ export const StyledNavbar = styled.nav`
             }
         }
 
-        @media ${responsive.mobileMediaQuery} {
+        @media ${responsiveMediaQueries.mobile} {
             position: fixed;
             inset: 0;
             height: 100vh;

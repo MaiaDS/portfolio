@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { hexToRgba, rem, responsive } from '../utils/utils'
+import { hexToRgba, rem, responsiveMediaQueries } from '../utils/utils'
 
 export const StyledAboutMe = styled.main`
     > svg {
@@ -25,7 +25,7 @@ export const StyledAboutMe = styled.main`
             position: relative;
             z-index: 25;
 
-            @media ${responsive.mobileMediaQuery} {
+            @media ${responsiveMediaQueries.mobile} {
                 z-index: 0;
             }
 
@@ -34,7 +34,7 @@ export const StyledAboutMe = styled.main`
                 list-style: none;
                 gap: ${({ theme }) => theme.spacing.xl};
 
-                @media ${responsive.mobileMediaQuery} {
+                @media ${responsiveMediaQueries.mobile} {
                     justify-content: space-between;
                     gap: unset;
                 }
@@ -47,7 +47,7 @@ export const StyledAboutMe = styled.main`
                     h2 {
                         font-size: ${({ theme }) => theme.fonts.sizes.h3};
 
-                        @media ${responsive.mobileMediaQuery} {
+                        @media ${responsiveMediaQueries.mobile} {
                             font-size: ${({ theme }) => theme.fonts.sizes.default};
                             font-family: ${({ theme }) => theme.fonts.families.secondary.regular};
                             color: ${({ theme }) => theme.colors.primary};
@@ -58,7 +58,7 @@ export const StyledAboutMe = styled.main`
                         border-color: ${({ theme }) => theme.colors.secondary};
                     }
 
-                    @media ${responsive.mobileMediaQuery} {
+                    @media ${responsiveMediaQueries.mobile} {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
@@ -108,7 +108,7 @@ export const StyledAboutMe = styled.main`
             svg {
                 overflow: visible;
 
-                @media ${responsive.desktopMediaQuery} {
+                @media ${responsiveMediaQueries.desktop} {
                     margin-left: ${rem(-20)};
                 }
             }

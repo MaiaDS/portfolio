@@ -1,4 +1,4 @@
-import { responsive } from '@/styles/utils/utils'
+import { responsiveMediaQueries } from '@/styles/utils/utils'
 import styled from 'styled-components'
 
 export const StyledExperiences = styled.section`
@@ -26,7 +26,7 @@ export const StyledExperiences = styled.section`
                 left: 50%;
                 transform: translateX(-50%);
 
-                @media ${responsive.mobileMediaQuery} {
+                @media ${responsiveMediaQueries.mobile} {
                     width: 100vw;
                     height: 92%;
                     top: 8%;
@@ -41,7 +41,7 @@ export const StyledExperiences = styled.section`
             flex-direction: column;
             gap: ${({ theme }) => theme.spacing.s};
 
-            @media ${responsive.mobileMediaQuery} {
+            @media ${responsiveMediaQueries.mobile} {
                 max-width: 100%;
             }
 
