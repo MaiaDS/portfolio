@@ -5,15 +5,21 @@ import { StyledLandingPage } from '@/styles/pages/StyledLandingPage'
 import { ScreenFormats, useCustomThemeContext } from '@/utils/CustomTheme'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 const LandingPage = () => {
     const router = useRouter()
     const { theme } = useCustomThemeContext()
 
+    const [shouldSwitchPage, setShouldSwitch] = useState<boolean>(false)
+
     const handleWheel = () => {
-        router.push('/readme')
+        setShouldSwitch(true)
     }
+
+    useEffect(() => {
+        if (shouldSwitchPage) router.push('/readme')
+    }, [shouldSwitchPage])
 
     useEffect(() => {
         window.addEventListener('wheel', handleWheel)
