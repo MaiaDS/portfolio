@@ -3,7 +3,7 @@ import { StyledSkills } from '../StyledSkills'
 
 const LandscapeSkills = () => {
     return (
-        <StyledSkills xmlns="http://www.w3.org/2000/svg" width="1332" height="400" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1332" height="400" fill="none">
             <g className="hexagons disabled">
                 <path d="M127.5 200L159.976 218.75V256.25L127.5 275L95.0239 256.25V218.75L127.5 200Z" />
                 <path d="M127.5 320L159.976 338.75V376.25L127.5 395L95.0239 376.25V338.75L127.5 320Z" />
@@ -784,7 +784,7 @@ const LandscapeSkills = () => {
                     <stop offset="1" stopColor={colors.lightGrey} />
                 </linearGradient>
             </defs>
-        </StyledSkills>
+        </svg>
     )
 }
 
