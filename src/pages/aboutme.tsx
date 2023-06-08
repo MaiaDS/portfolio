@@ -30,23 +30,33 @@ const AboutMe = () => {
             label: 'Experiences',
             ico: <ExperiencesIco />,
             component: <Experiences />,
-            bees: [
-                new Vector3(8, 0, 0),
-                new Vector3(8, -6, -5),
-                new Vector3(8, -3, 1),
-                new Vector3(14, -1, -20)
-            ]
+            bees:
+                theme === ScreenFormats.DESKTOP
+                    ? [
+                          new Vector3(8, 0, 0),
+                          new Vector3(8, -6, -5),
+                          new Vector3(8, -3, 1),
+                          new Vector3(14, -1, -20)
+                      ]
+                    : []
         },
         {
             label: 'Education',
             ico: <EducationIco />,
             component: <Education />,
-            bees: [
-                new Vector3(8, 0, 0),
-                new Vector3(2.5, -3, 10),
-                new Vector3(8, -3, 1),
-                new Vector3(14, -1, -20)
-            ]
+            bees:
+                theme === ScreenFormats.DESKTOP
+                    ? [
+                          new Vector3(8, 0, 0),
+                          new Vector3(2.5, -3, 10),
+                          new Vector3(8, -3, 1),
+                          new Vector3(14, -1, -20)
+                      ]
+                    : [
+                          new Vector3(1, -3.5, 10),
+                          new Vector3(-1.5, -4, 5),
+                          new Vector3(-0.75, -4.5, -5)
+                      ]
         }
     ]
 

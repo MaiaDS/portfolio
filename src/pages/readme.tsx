@@ -7,15 +7,23 @@ import { Vector3 } from 'three'
 
 const ReadMe = () => {
     const { theme } = useCustomThemeContext()
-    const bees = [
-        new Vector3(-0.5, -3.25, 8),
-        new Vector3(1, -2.5, -4),
-        new Vector3(1, -3.5, 10),
-        new Vector3(5.5, -4.5, 0),
-        new Vector3(12, -8, -15),
-        new Vector3(8, -3, 1),
-        new Vector3(14, 0, -20)
-    ]
+    const bees =
+        theme === ScreenFormats.DESKTOP
+            ? [
+                  new Vector3(-0.5, -3.25, 8),
+                  new Vector3(1, -2.5, -4),
+                  new Vector3(1, -3.5, 10),
+                  new Vector3(5.5, -4.5, 0),
+                  new Vector3(12, -8, -15),
+                  new Vector3(8, -3, 1),
+                  new Vector3(14, 0, -20)
+              ]
+            : [
+                  new Vector3(-0.5, -3.25, 8),
+                  new Vector3(1, -2.5, -4),
+                  new Vector3(1, -3.5, 10),
+                  new Vector3(6, -1, -20)
+              ]
 
     return (
         <MainLayout bees={bees}>

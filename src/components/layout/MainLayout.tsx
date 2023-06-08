@@ -12,7 +12,7 @@ const MainLayout = (props: { children: ReactNode; bees: Vector3[] }) => {
         <StyledMainLayout>
             <Navbar />
             {props.children}
-            {props.bees.length !== 0 && theme === ScreenFormats.DESKTOP && (
+            {props.bees.length !== 0 && theme !== ScreenFormats.MOBILE && (
                 <ThreejsCanvas
                     cameraProps={{
                         fov: 25,
