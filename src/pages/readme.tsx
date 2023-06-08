@@ -55,7 +55,7 @@ const ReadMe = () => {
                     </div>
                 </section>
 
-                {theme === ScreenFormats.LANDSCAPE && (
+                {theme === ScreenFormats.DESKTOP && (
                     <div className="beehives">
                         <BeehiveSVG />
                         <BeehiveSVG />

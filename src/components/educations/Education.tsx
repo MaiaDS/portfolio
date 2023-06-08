@@ -12,15 +12,15 @@ const Education = () => {
                         {diploma.title}
                         {diploma.specialty && (
                             <>
-                                {theme === ScreenFormats.LANDSCAPE ? ' - ' : <br />}
+                                {theme !== ScreenFormats.MOBILE ? ' - ' : <br />}
                                 {diploma.specialty}
                             </>
                         )}
-                        {theme === ScreenFormats.LANDSCAPE ? ' | ' : <br />}
+                        {theme === ScreenFormats.DESKTOP ? ' | ' : <br />}
                         {diploma.school}
                     </h3>
                     <h4>
-                        {diploma.dates} {theme === ScreenFormats.LANDSCAPE ? ' | ' : <br />}{' '}
+                        {diploma.dates} {theme !== ScreenFormats.MOBILE ? ' | ' : <br />}{' '}
                         {diploma.location}
                     </h4>
                     {diploma.description}

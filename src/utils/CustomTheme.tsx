@@ -3,24 +3,27 @@ import { ReactNode, createContext, useContext, useEffect, useState } from 'react
 import { ThemeProvider } from 'styled-components'
 
 export enum ScreenFormats {
-    LANDSCAPE,
-    PORTRAIT
+    MOBILE,
+    TABLET,
+    DESKTOP
 }
 
 const CustomThemeContext = createContext({
-    theme: ScreenFormats.LANDSCAPE,
+    theme: ScreenFormats.DESKTOP,
     updateTheme: () => {}
 })
 
 export const useCustomThemeContext = () => useContext(CustomThemeContext)
 
 export const CustomThemeProvider = (props: { children: ReactNode }) => {
-    const [theme, setTheme] = useState(ScreenFormats.LANDSCAPE)
+    const [theme, setTheme] = useState(ScreenFormats.DESKTOP)
     const updateTheme = () => {
-        if (window.innerWidth < 1024) {
-            setTheme(ScreenFormats.PORTRAIT)
+        if (window.innerWidth < 768) {
+            setTheme(ScreenFormats.MOBILE)
+        } else if (window.innerWidth < 1024) {
+            setTheme(ScreenFormats.TABLET)
         } else {
-            setTheme(ScreenFormats.LANDSCAPE)
+            setTheme(ScreenFormats.DESKTOP)
         }
     }
     useEffect(() => {
@@ -30,7 +33,7 @@ export const CustomThemeProvider = (props: { children: ReactNode }) => {
         })
     }, [])
 
-    const themeFile = theme === ScreenFormats.LANDSCAPE ? CustomTheme : CustomMobileTheme
+    const themeFile = theme !== ScreenFormats.DESKTOP ? CustomMobileTheme : CustomTheme
 
     return (
         <CustomThemeContext.Provider value={{ theme, updateTheme }}>

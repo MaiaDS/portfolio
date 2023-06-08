@@ -31,8 +31,8 @@ const LandingPage = () => {
     return (
         <StyledLandingPage>
             <BeehiveSVG />
-            {theme === ScreenFormats.LANDSCAPE && <BeehiveSVG />}
-            <Link href="/readme">{theme === ScreenFormats.LANDSCAPE && 'Scroll to'} enter</Link>
+            {theme === ScreenFormats.DESKTOP && <BeehiveSVG />}
+            <Link href="/readme">{theme === ScreenFormats.DESKTOP && 'Scroll to'} enter</Link>
             <section>
                 <h1>
                     Ma<span>ï</span>a

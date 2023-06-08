@@ -7,33 +7,37 @@ import { StyledSkills } from './StyledSkills'
 const Skills = () => {
     const { theme } = useCustomThemeContext()
     const containerRef = useRef<HTMLElement>(null!)
-
     const [containerWidth, setContainerWidth] = useState<number>()
     const [scale, setScale] = useState<number>(1)
 
-    useEffect(() => {
-        setContainerWidth(containerRef.current.clientWidth)
-        window.addEventListener('resize', () => {
+    const updateContainerWidth = () => {
+        if (containerRef.current) {
             setContainerWidth(containerRef.current.clientWidth)
+        }
+    }
+
+    useEffect(() => {
+        updateContainerWidth()
+        window.addEventListener('resize', () => {
+            updateContainerWidth()
         })
     }, [containerRef])
 
     useEffect(() => {
-        const containerWidth = containerRef.current.clientWidth
-        let skillInitialWidth: number
-        if (theme === ScreenFormats.LANDSCAPE) {
-            skillInitialWidth = 1332
-        } else {
-            skillInitialWidth = 300
+        if (containerWidth) {
+            let skillInitialWidth: number
+            if (theme === ScreenFormats.DESKTOP) {
+                skillInitialWidth = 1332
+            } else {
+                skillInitialWidth = 300
+            }
+            setScale((containerWidth * 100) / skillInitialWidth / 100)
         }
-        setScale((containerWidth * 100) / skillInitialWidth / 100)
     }, [containerWidth])
-
-    console.log(scale)
 
     return (
         <StyledSkills ref={containerRef} scale={scale}>
-            {theme === ScreenFormats.LANDSCAPE ? <LandscapeSkills /> : <PortraitSkills />}
+            {theme === ScreenFormats.DESKTOP ? <LandscapeSkills /> : <PortraitSkills />}
         </StyledSkills>
     )
 }

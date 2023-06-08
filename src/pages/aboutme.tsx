@@ -8,7 +8,7 @@ import { ScreenFormats, useCustomThemeContext } from '@/utils/CustomTheme'
 import { EducationIco, ExperiencesIco, SkillsIco } from '@/utils/Icons'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { ReactElement } from 'react'
+import { ReactElement, useEffect, useState } from 'react'
 import { Vector3 } from 'three'
 
 type Tab = {
@@ -78,7 +78,7 @@ const AboutMe = () => {
                                     <Link
                                         href={{ pathname: '/aboutme', query: tab.label }}
                                         className={isSelected(tab.label) ? 'selected' : ''}>
-                                        {theme === ScreenFormats.PORTRAIT && <span>{tab.ico}</span>}
+                                        {theme === ScreenFormats.MOBILE && <span>{tab.ico}</span>}
 
                                         <h2>{tab.label}</h2>
                                     </Link>
@@ -88,7 +88,7 @@ const AboutMe = () => {
                     </nav>
                     {getComponent()}
                 </div>
-                {theme === ScreenFormats.LANDSCAPE && <BeehiveSVG />}
+                {theme === ScreenFormats.DESKTOP && <BeehiveSVG />}
             </StyledAboutMe>
         </MainLayout>
     )

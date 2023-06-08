@@ -11,7 +11,7 @@ const CombeeModel = () => {
     const scene = model.scene
     scene.children = scene.children.filter((child: any) => child.name !== 'Tail')
     const { theme } = useCustomThemeContext()
-    const positionX = theme === ScreenFormats.PORTRAIT ? 1 : 4.5
+    const positionX = theme !== ScreenFormats.DESKTOP ? 1 : 4.5
     return (
         <Float rotationIntensity={0.1} speed={4}>
             <group

@@ -12,16 +12,16 @@ const Experiences = () => {
                         {experience.position}
                         {experience.type && (
                             <>
-                                {theme === ScreenFormats.LANDSCAPE ? ' | ' : <br />}
+                                {theme !== ScreenFormats.MOBILE ? ' | ' : <br />}
                                 <small>{`(${experience.type})`}</small>
                             </>
                         )}
-                        {theme === ScreenFormats.LANDSCAPE ? ' | ' : <br />}
+                        {theme !== ScreenFormats.MOBILE ? ' | ' : <br />}
                         {experience.company}
                     </h3>
                     <h4>
                         {experience.dates}
-                        {theme === ScreenFormats.LANDSCAPE ? ' | ' : <br />}
+                        {theme !== ScreenFormats.MOBILE ? ' | ' : <br />}
                         {experience.location}
                     </h4>
                     <ul>
