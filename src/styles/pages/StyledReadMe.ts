@@ -6,7 +6,7 @@ export const StyledReadMe = styled.main`
     flex-direction: column;
     gap: ${({ theme }) => theme.spacing.xl};
 
-    @media ${responsiveMediaQueries.mobile} {
+    @media ${responsiveMediaQueries.portrait} {
         gap: ${({ theme }) => theme.spacing.l};
     }
 
@@ -21,7 +21,7 @@ export const StyledReadMe = styled.main`
                 margin-bottom: ${({ theme }) => theme.spacing.s};
             }
 
-            @media ${responsiveMediaQueries.mobile} {
+            @media ${responsiveMediaQueries.portrait} {
                 max-width: 100%;
             }
         }

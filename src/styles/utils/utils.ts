@@ -50,6 +50,6 @@ export const Fonts = createGlobalStyle`
 `
 
 export const responsiveMediaQueries = {
-    mobile: '(orientation: portrait)',
-    desktop: '(orientation: landscape)'
+    portrait: '(orientation: portrait)',
+    landscape: '(orientation: landscape)'
 }

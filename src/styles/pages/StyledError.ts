@@ -14,7 +14,7 @@ export const StyledError = styled.main`
     gap: ${({ theme }) => theme.spacing.xl};
     position: relative;
 
-    @media ${responsiveMediaQueries.mobile} {
+    @media ${responsiveMediaQueries.portrait} {
         justify-content: end;
         h2 {
             text-align: center;
@@ -30,7 +30,7 @@ export const StyledError = styled.main`
         border-right: 4px solid ${({ theme }) => theme.colors.secondary};
         vertical-align: middle !important;
 
-        @media ${responsiveMediaQueries.mobile} {
+        @media ${responsiveMediaQueries.portrait} {
             font-size: ${rem(75)} !important;
             border: none;
             padding: 0 !important;

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { StyledNavbar } from './StyledNavbar'
-import { CloseIco, LinkedInIco, MenuIco, OpenIco } from '@/utils/Icons'
+import { LinkedInIco, MenuIco, OpenIco } from '@/utils/Icons'
 import { ScreenFormats, useCustomThemeContext } from '@/utils/CustomTheme'
 import { useState, useEffect } from 'react'
 import ThreejsCanvas from '@/components/threejs'

@@ -65,7 +65,7 @@ export const StyledNavbar = styled.nav`
                         border-color: ${({ theme }) => theme.colors.secondary};
                     }
 
-                    @media ${responsiveMediaQueries.mobile} {
+                    @media ${responsiveMediaQueries.portrait} {
                         text-transform: uppercase;
                     }
                 }
@@ -80,7 +80,7 @@ export const StyledNavbar = styled.nav`
             }
         }
 
-        @media ${responsiveMediaQueries.mobile} {
+        @media ${responsiveMediaQueries.portrait} {
             position: fixed;
             inset: 0;
             height: 100vh;

@@ -26,7 +26,7 @@ export const StyledExperiences = styled.section`
                 left: 50%;
                 transform: translateX(-50%);
 
-                @media ${responsiveMediaQueries.mobile} {
+                @media ${responsiveMediaQueries.portrait} {
                     width: 100vw;
                     height: 92%;
                     top: 8%;
@@ -41,7 +41,7 @@ export const StyledExperiences = styled.section`
             flex-direction: column;
             gap: ${({ theme }) => theme.spacing.s};
 
-            @media ${responsiveMediaQueries.mobile} {
+            @media ${responsiveMediaQueries.portrait} {
                 max-width: 100%;
             }
 

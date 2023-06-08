@@ -9,7 +9,7 @@ export const StyledLandingPage = styled.main`
     padding: ${({ theme }) => theme.spacing.xl};
     position: relative;
 
-    @media ${responsiveMediaQueries.mobile} {
+    @media ${responsiveMediaQueries.portrait} {
         flex-direction: column-reverse;
         padding: ${({ theme }) => theme.spacing.m};
     }
@@ -21,7 +21,7 @@ export const StyledLandingPage = styled.main`
             top: ${rem(-50)};
             right: ${rem(-50)};
 
-            @media ${responsiveMediaQueries.mobile} {
+            @media ${responsiveMediaQueries.portrait} {
                 top: ${rem(-200)};
                 right: ${rem(-100)};
                 scale: 0.9;
@@ -59,7 +59,7 @@ export const StyledLandingPage = styled.main`
         font-size: ${({ theme }) => theme.fonts.sizes.small};
         font-family: ${({ theme }) => theme.fonts.families.primary.medium};
 
-        @media ${responsiveMediaQueries.mobile} {
+        @media ${responsiveMediaQueries.portrait} {
             position: inherit;
             bottom: unset;
             left: unset;
@@ -74,7 +74,7 @@ export const StyledLandingPage = styled.main`
         position: inherit;
         z-index: 10;
 
-        @media ${responsiveMediaQueries.mobile} {
+        @media ${responsiveMediaQueries.portrait} {
             width: min-content;
             margin: 0 auto;
         }
@@ -86,7 +86,7 @@ export const StyledLandingPage = styled.main`
             font-variant-caps: normal;
             color: ${({ theme }) => theme.colors.dark};
 
-            @media ${responsiveMediaQueries.mobile} {
+            @media ${responsiveMediaQueries.portrait} {
                 font-size: ${rem(65)};
                 line-height: ${rem(50)};
             }
@@ -107,7 +107,7 @@ export const StyledLandingPage = styled.main`
             text-align: justify;
             text-justify: inter-character;
 
-            @media ${responsiveMediaQueries.mobile} {
+            @media ${responsiveMediaQueries.portrait} {
                 line-height: ${rem(25)};
                 letter-spacing: ${rem(19)};
             }
