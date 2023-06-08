@@ -1,5 +1,4 @@
 import { colors } from '@/styles/utils/utils'
-import { StyledSkills } from '../StyledSkills'
 
 const LandscapeSkills = () => {
     return (
