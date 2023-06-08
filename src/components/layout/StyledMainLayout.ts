@@ -8,7 +8,7 @@ export const StyledMainLayout = styled.div`
     overflow: hidden;
     position: relative;
 
-    @media ${responsiveMediaQueries.portrait} {
+    @media ${responsiveMediaQueries.mobile} {
         padding: ${({ theme }) => theme.spacing.l};
 
         main {

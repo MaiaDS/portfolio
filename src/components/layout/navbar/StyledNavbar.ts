@@ -33,7 +33,7 @@ export const StyledNavbar = styled.nav`
 
         > button {
             width: ${rem(50)};
-            height: ${rem(50)};
+            height: ${rem(55)};
             background-color: ${({ theme }) => theme.colors.primary};
             clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
             display: flex;
@@ -65,7 +65,7 @@ export const StyledNavbar = styled.nav`
                         border-color: ${({ theme }) => theme.colors.secondary};
                     }
 
-                    @media ${responsiveMediaQueries.portrait} {
+                    @media ${responsiveMediaQueries.mobile} {
                         text-transform: uppercase;
                     }
                 }
@@ -80,7 +80,7 @@ export const StyledNavbar = styled.nav`
             }
         }
 
-        @media ${responsiveMediaQueries.portrait} {
+        @media ${responsiveMediaQueries.mobile} {
             position: fixed;
             inset: 0;
             height: 100vh;
