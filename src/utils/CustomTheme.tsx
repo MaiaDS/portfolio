@@ -17,12 +17,9 @@ export const useCustomThemeContext = () => useContext(CustomThemeContext)
 export const CustomThemeProvider = (props: { children: ReactNode }) => {
     const [theme, setTheme] = useState(ScreenFormats.LANDSCAPE)
     const updateTheme = () => {
-        const screenOrientation = window.screen.orientation
         if (window.innerWidth < 1024) {
-            screenOrientation.lock('portrait')
             setTheme(ScreenFormats.PORTRAIT)
         } else {
-            screenOrientation.lock('landscape')
             setTheme(ScreenFormats.LANDSCAPE)
         }
     }
