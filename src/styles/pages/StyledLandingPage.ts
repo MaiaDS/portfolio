@@ -29,7 +29,7 @@ export const StyledLandingPage = styled.main`
             }
         }
 
-        @media ${responsiveMediaQueries.desktop} {
+        @media ${responsiveMediaQueries.landscape} {
             &:last-of-type {
                 bottom: ${rem(-50)};
                 left: ${rem(-50)};
@@ -114,8 +114,15 @@ export const StyledLandingPage = styled.main`
         }
     }
 
-    > div {
-        flex: 1 1 auto;
+    .threejs {
         width: unset !important;
+
+        @media ${responsiveMediaQueries.portrait} {
+            height: ${rem(420)} !important;
+        }
+
+        @media ${responsiveMediaQueries.landscape} {
+            flex: 1 1 auto;
+        }
     }
 `
