@@ -9,21 +9,6 @@ body {
     font-size: ${({ theme }) => theme.fonts.sizes.default};
     font-family: ${({ theme }) => theme.fonts.families.primary.regular};
 
-    * {
-        box-sizing: border-box;
-    }
-
-    button {
-        appearance: none;
-        background-color: transparent;
-        cursor: pointer;
-    }
-
-    a {
-        cursor: pointer;
-        display: block;
-    }
-
     h1, h2, h3, h4,
     .title {
         color: ${({ theme }) => theme.colors.primary};
