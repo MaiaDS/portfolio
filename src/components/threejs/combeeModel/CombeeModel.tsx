@@ -11,14 +11,13 @@ const CombeeModel = () => {
     const scene = model.scene
     scene.children = scene.children.filter((child: any) => child.name !== 'Tail')
     const { theme } = useCustomThemeContext()
-    const positionX = theme === ScreenFormats.PORTRAIT ? 1 : 1.5
-    const scale = theme === ScreenFormats.PORTRAIT ? 1 : 1
+    const positionX = theme === ScreenFormats.PORTRAIT ? 1 : 4.5
     return (
         <Float rotationIntensity={0.1} speed={4}>
             <group
-                rotation={new Euler(-0.25, -1, 0)}
+                rotation={new Euler(-0.25, -1.25, 0)}
                 position={new Vector3(positionX, -3, 0)}
-                scale={scale}>
+                scale={1}>
                 <primitive object={scene} />
                 <mesh
                     geometry={model.nodes.Tail.geometry}

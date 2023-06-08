@@ -58,6 +58,7 @@ export const StyledLandingPage = styled.main`
         padding-bottom: ${({ theme }) => theme.spacing.xs};
         font-size: ${({ theme }) => theme.fonts.sizes.small};
         font-family: ${({ theme }) => theme.fonts.families.primary.medium};
+        z-index: 10;
 
         @media ${responsiveMediaQueries.portrait} {
             position: inherit;
@@ -103,7 +104,7 @@ export const StyledLandingPage = styled.main`
         h2 {
             padding-left: ${rem(5)};
             font-size: ${({ theme }) => theme.fonts.sizes.h1};
-            letter-spacing: ${rem(13.5)};
+            letter-spacing: ${rem(17)};
             text-align: justify;
             text-justify: inter-character;
 
@@ -115,14 +116,13 @@ export const StyledLandingPage = styled.main`
     }
 
     .threejs {
-        width: unset !important;
+        position: absolute !important;
+        inset: auto 0 0 auto;
+        z-index: 5;
 
         @media ${responsiveMediaQueries.portrait} {
+            position: initial !important;
             height: ${rem(420)} !important;
-        }
-
-        @media ${responsiveMediaQueries.landscape} {
-            flex: 1 1 auto;
         }
     }
 `
