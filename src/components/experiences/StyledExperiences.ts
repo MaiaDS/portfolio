@@ -26,7 +26,7 @@ export const StyledExperiences = styled.section`
                 left: 50%;
                 transform: translateX(-50%);
 
-                @media ${responsiveMediaQueries.portrait} {
+                @media ${responsiveMediaQueries.mobile} {
                     width: 100vw;
                     height: 92%;
                     top: 8%;
