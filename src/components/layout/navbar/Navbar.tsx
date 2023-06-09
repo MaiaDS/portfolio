@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { StyledNavbar } from './StyledNavbar'
-import { LinkedInIco, MenuIco, OpenIco } from '@/utils/Icons'
+import { InfosIco, LinkedInIco, MenuIco, OpenIco } from '@/utils/Icons'
 import { useState, useEffect } from 'react'
 import ThreejsCanvas from '@/components/threejs'
 import ChubbeeModel from '@/components/threejs/chubbeeModel'
@@ -88,6 +88,11 @@ const Navbar = () => {
                                 className="ico">
                                 <OpenIco />
                             </a>
+                        </li>
+                        <li>
+                            <Link href="/infos" onClick={handleClick} className="ico">
+                                <InfosIco />
+                            </Link>
                         </li>
                     </ul>
                 </li>
