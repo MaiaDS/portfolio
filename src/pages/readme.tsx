@@ -1,19 +1,40 @@
 import { BeehiveSVG } from '@/components/BeehiveSVG'
 import MainLayout from '@/components/layout/MainLayout'
-import ThreejsCanvas from '@/components/threejs/ThreejsCanvas'
-import ChubbeeModel from '@/components/threejs/chubbeeModel/ChubbeeModel'
 import { StyledReadMe } from '@/styles/pages/StyledReadMe'
+import { ScreenFormats, useCustomThemeContext } from '@/utils/CustomTheme'
 import { EmailIco } from '@/utils/Icons'
 import { Vector3 } from 'three'
 
 const ReadMe = () => {
+    const { theme } = useCustomThemeContext()
+    const bees =
+        theme === ScreenFormats.DESKTOP
+            ? [
+                  new Vector3(-0.5, -3.25, 8),
+                  new Vector3(1, -2.5, -4),
+                  new Vector3(1, -3.5, 10),
+                  new Vector3(5.5, -4.5, 0),
+                  new Vector3(12, -8, -15),
+                  new Vector3(8, -3, 1),
+                  new Vector3(14, 0, -20)
+              ]
+            : [
+                  new Vector3(-0.5, -3.25, 8),
+                  new Vector3(1, -2.5, -4),
+                  new Vector3(1, -3.5, 10),
+                  new Vector3(6, -1, -20)
+              ]
+
     return (
-        <MainLayout>
+        <MainLayout bees={bees}>
             <StyledReadMe>
                 <section>
                     <div>
                         <h1>READ.me</h1>
-                        <h2>Hi! I'm Maïa, a Front-end developer</h2>
+                        <h2>
+                            Hi! I'm Maïa,
+                            <br />a Front-end developer
+                        </h2>
                     </div>
                     <article>
                         <p>
@@ -42,29 +63,12 @@ const ReadMe = () => {
                     </div>
                 </section>
 
-                <div className="beehives">
-                    <BeehiveSVG />
-                    <BeehiveSVG />
-                </div>
-                <ThreejsCanvas
-                    cameraProps={{
-                        fov: 25,
-                        near: 0.1,
-                        far: 50,
-                        position: new Vector3(0, -0.5, 20)
-                    }}>
-                    <ChubbeeModel
-                        beesPositions={[
-                            new Vector3(-0.5, -3, 8),
-                            new Vector3(1, -2.5, -4),
-                            new Vector3(1, -3.5, 10),
-                            new Vector3(5.5, -4.5, 0),
-                            new Vector3(12, -8, -15),
-                            new Vector3(8, -3, 1),
-                            new Vector3(14, 0, -20)
-                        ]}
-                    />
-                </ThreejsCanvas>
+                {theme === ScreenFormats.DESKTOP && (
+                    <>
+                        <BeehiveSVG />
+                        <BeehiveSVG />
+                    </>
+                )}
             </StyledReadMe>
         </MainLayout>
     )

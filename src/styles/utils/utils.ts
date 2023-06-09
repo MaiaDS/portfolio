@@ -23,6 +23,11 @@ export const colors = {
 
 export const Fonts = createGlobalStyle`
     @font-face {
+        font-family: 'CascadiaCode-Regular';
+        src: url('/fonts/CascadiaCode-Regular.otf') format('otf'),
+            url('/fonts/CascadiaCode-Regular.woff2') format('woff2');
+    }
+    @font-face {
         font-family: 'CascadiaCode-Bold';
         src: url('/fonts/CascadiaCode-Bold.otf') format('otf'),
             url('/fonts/CascadiaCode-Bold.woff2') format('woff2');
@@ -43,3 +48,10 @@ export const Fonts = createGlobalStyle`
             url('/fonts/Marianne-Bold.woff2') format('woff2');
     }
 `
+
+export const responsiveMediaQueries = {
+    mobile: 'screen and (max-width: 767px)',
+    desktop: 'screen and (min-width: 1024px)',
+    portrait: '(orientation: portrait)',
+    landscape: '(orientation: landscape)'
+}

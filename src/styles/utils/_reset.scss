@@ -62,6 +62,8 @@ ul {
 
 a {
     text-decoration: none;
+    cursor: pointer;
+    display: block;
 }
 caption,
 th {
@@ -114,6 +116,8 @@ button {
     margin: 0;
     font-size: rem(16);
     text-decoration: none;
-    background-color: #ffffff;
     border: none;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
 }
