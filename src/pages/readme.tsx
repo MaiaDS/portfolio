@@ -64,10 +64,10 @@ const ReadMe = () => {
                 </section>
 
                 {theme === ScreenFormats.DESKTOP && (
-                    <div className="beehives">
+                    <>
                         <BeehiveSVG />
                         <BeehiveSVG />
-                    </div>
+                    </>
                 )}
             </StyledReadMe>
         </MainLayout>

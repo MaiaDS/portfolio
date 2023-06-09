@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { hexToRgba, rem, responsiveMediaQueries } from '../utils/utils'
+import { rem, responsiveMediaQueries } from '../utils/utils'
 
 export const StyledReadMe = styled.main`
     display: flex;
@@ -38,9 +38,7 @@ export const StyledReadMe = styled.main`
         }
     }
 
-    .beehives svg {
-        position: absolute;
-
+    .beehive {
         &:first-of-type {
             right: ${rem(-125)};
             bottom: ${rem(50)};
@@ -51,12 +49,6 @@ export const StyledReadMe = styled.main`
             left: 0;
             bottom: ${rem(-150)};
             transform: scaleY(-1);
-        }
-
-        --dropShadowColor: ${({ theme }) => hexToRgba(theme.colors.dark, 0.1)};
-        filter: drop-shadow(0px 4px 24px var(--dropShadowColor));
-        path {
-            fill: ${({ theme }) => theme.colors.light};
         }
     }
 `

@@ -14,9 +14,7 @@ export const StyledLandingPage = styled.main`
         padding: ${({ theme }) => theme.spacing.m};
     }
 
-    svg {
-        position: absolute;
-
+    .beehive {
         &:first-of-type {
             top: ${rem(-50)};
             right: ${rem(-50)};
