@@ -20,7 +20,7 @@ const ErrorPage = (props: { errorCode: number | false }) => {
     const { theme } = useCustomThemeContext()
 
     const bees =
-        theme === ScreenFormats.LANDSCAPE
+        theme === ScreenFormats.DESKTOP
             ? [
                   new Vector3(-2.5, -3, 12),
                   new Vector3(4, -3, 10),
