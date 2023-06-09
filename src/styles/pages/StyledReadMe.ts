@@ -1,10 +1,14 @@
 import styled from 'styled-components'
-import { hexToRgba, rem } from '../utils/utils'
+import { rem, responsiveMediaQueries } from '../utils/utils'
 
 export const StyledReadMe = styled.main`
     display: flex;
     flex-direction: column;
     gap: ${({ theme }) => theme.spacing.xl};
+
+    @media ${responsiveMediaQueries.portrait} {
+        gap: ${({ theme }) => theme.spacing.l};
+    }
 
     section {
         display: flex;
@@ -15,6 +19,10 @@ export const StyledReadMe = styled.main`
             max-width: 75%;
             &:not(:last-of-type) {
                 margin-bottom: ${({ theme }) => theme.spacing.s};
+            }
+
+            @media ${responsiveMediaQueries.portrait} {
+                max-width: 100%;
             }
         }
 
@@ -30,9 +38,7 @@ export const StyledReadMe = styled.main`
         }
     }
 
-    .beehives svg {
-        position: absolute;
-
+    .beehive {
         &:first-of-type {
             right: ${rem(-125)};
             bottom: ${rem(50)};
@@ -44,17 +50,5 @@ export const StyledReadMe = styled.main`
             bottom: ${rem(-150)};
             transform: scaleY(-1);
         }
-
-        --dropShadowColor: ${({ theme }) => hexToRgba(theme.colors.dark, 0.1)};
-        filter: drop-shadow(0px 4px 24px var(--dropShadowColor));
-        path {
-            fill: ${({ theme }) => theme.colors.light};
-        }
-    }
-
-    .threejs {
-        position: absolute !important;
-        bottom: 0;
-        right: 0;
     }
 `

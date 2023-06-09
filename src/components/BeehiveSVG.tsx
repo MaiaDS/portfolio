@@ -1,5 +1,10 @@
 export const BeehiveSVG = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width={514} height={340} fill="none">
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={514}
+        height={340}
+        fill="none"
+        className="beehive">
         <path d="M326 0L369.301 25V75L326 100L282.699 75V25L326 0Z" />
         <path d="M326 160L369.301 185V235L326 260L282.699 235V185L326 160Z" />
         <path d="M464 80L507.301 105V155L464 180L420.699 155V105L464 80Z" />

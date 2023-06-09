@@ -1,5 +1,6 @@
 type Education = {
     title: string
+    specialty?: string
     school: string
     dates: string
     location: string
@@ -14,25 +15,29 @@ export const EDUCATION: Education[] = [
         location: 'Online Course'
     },
     {
-        title: 'BACHELOR’S DEGREE - Full-stack Development',
+        title: 'BACHELOR’S DEGREE',
+        specialty: 'Full-stack Development',
         school: 'Capitole University',
         dates: '2020-2021',
         location: 'Toulouse, France'
     },
     {
-        title: 'DUT (Technology Degree) - IT',
+        title: 'DUT (Technology Degree)',
+        specialty: 'IT',
         school: 'Paul Sabatier University',
         dates: '2019-2020',
         location: 'Toulouse, France'
     },
     {
-        title: 'BTS (french degree) - GRAPHIC DESIGN',
+        title: 'BTS (french degree)',
+        specialty: 'GRAPHIC DESIGN',
         school: 'ESAAT',
         dates: '2017-2019',
         location: 'Roubaix, France'
     },
     {
-        title: 'PREPARATORY COURSE IN APPLIED ARTS',
+        title: 'PREPARATORY COURSE',
+        specialty: 'APPLIED ARTS',
         school: 'Saliège School',
         dates: '2016-2017',
         location: 'Toulouse, France'

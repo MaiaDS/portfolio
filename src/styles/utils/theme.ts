@@ -1,12 +1,25 @@
 import { colors, rem } from './utils'
 
 export interface ICustomTheme {
-    fontSizes: {
-        h1: string
-        h2: string
-        h3: string
-        default: string
-        small: string
+    fonts: {
+        sizes: {
+            h1: string
+            h2: string
+            h3: string
+            default: string
+            small: string
+        }
+        families: {
+            secondary: {
+                regular: string
+                bold: string
+            }
+            primary: {
+                regular: string
+                medium: string
+                bold: string
+            }
+        }
     }
     spacing: {
         xs: string
@@ -24,13 +37,23 @@ export interface ICustomTheme {
     borderRadius: string
 }
 
-export const CustomTheme = {
-    fontSizes: {
-        h1: rem(40),
-        h2: rem(32),
-        h3: rem(24),
-        default: rem(16),
-        small: rem(14)
+const CustomTheme: ICustomTheme = {
+    fonts: {
+        families: {
+            secondary: { regular: 'CascadiaCode-Regular', bold: 'CascadiaCode-Bold' },
+            primary: {
+                regular: 'Marianne-Regular',
+                medium: 'Marianne-Medium',
+                bold: 'Marianne-Bold'
+            }
+        },
+        sizes: {
+            h1: rem(40),
+            h2: rem(32),
+            h3: rem(24),
+            default: rem(16),
+            small: rem(14)
+        }
     },
     spacing: {
         xs: rem(10),
@@ -47,3 +70,13 @@ export const CustomTheme = {
     },
     borderRadius: `6px`
 }
+
+const CustomMobileTheme = { ...CustomTheme }
+CustomMobileTheme.fonts.sizes = {
+    h1: rem(32),
+    h2: rem(24),
+    h3: rem(20),
+    default: rem(14),
+    small: rem(12)
+}
+export { CustomTheme, CustomMobileTheme }

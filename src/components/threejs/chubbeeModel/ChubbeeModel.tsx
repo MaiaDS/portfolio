@@ -5,17 +5,16 @@ import { beeStripesShader } from '../shaders/beeShader'
 import { colors } from '@/styles/utils/utils'
 import { Clone, Float } from '@react-three/drei'
 
-const ChubbeeModel = (props: { beesPositions: Vector3[] }) => {
+const ChubbeeModel = (props: { bees: Vector3[] }) => {
     const model: any = useLoader(GLTFLoader, '/assets/bee.glb')
     const scene = model.scene
     scene.children = scene.children.filter((child: any) => child.name !== 'Body')
 
-    console.log(model.nodes)
     return (
         <>
-            {props.beesPositions.map((beePosition) => (
-                <Float rotationIntensity={0.1} speed={0.75}>
-                    <group key={beePosition.toArray().toString()} position={beePosition}>
+            {props.bees.map((bee) => (
+                <Float rotationIntensity={0.1} speed={0.75} key={bee.toArray().toString()}>
+                    <group position={bee}>
                         <Clone object={scene} />
                         <mesh
                             geometry={model.nodes.Body.geometry}
