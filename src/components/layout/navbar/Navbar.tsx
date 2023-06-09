@@ -82,7 +82,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <a
-                                href="/assets/maia_dasilva_resume.pdf"
+                                href="/assets/cv_maia_da-silva.pdf"
                                 onClick={handleClick}
                                 target="_blank"
                                 className="ico">
