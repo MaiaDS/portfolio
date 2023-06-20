@@ -35,6 +35,11 @@ const Infos = () => {
                     <ul>
                         <li>By Maïa Da Silva</li>
                         <li>Next.js, Three.js, GitHub, Vercel</li>
+                        <li>
+                            <a href="https://github.com/MaiaDS/portfolio" target="_blank">
+                                GitHub repository
+                            </a>
+                        </li>
                     </ul>
                 </section>
                 <section>

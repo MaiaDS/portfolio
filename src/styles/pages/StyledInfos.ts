@@ -28,6 +28,14 @@ export const StyledInfos = styled.main`
             ul {
                 padding-left: ${({ theme }) => theme.spacing.l};
             }
+
+            a {
+                position: relative;
+                display: initial;
+                text-decoration: underline;
+                color: ${({ theme }) => theme.colors.dark};
+                z-index: 10;
+            }
         }
     }
 
