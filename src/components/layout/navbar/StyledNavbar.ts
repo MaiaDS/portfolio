@@ -92,7 +92,7 @@ export const StyledNavbar = styled.nav`
 
             > ul {
                 height: 100%;
-                flex-direction: column-reverse;
+                flex-direction: column;
                 justify-content: center;
 
                 li:first-of-type ul {
