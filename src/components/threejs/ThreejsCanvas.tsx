@@ -32,7 +32,7 @@ const ThreejsCanvas = (props: IExperienceProps) => {
                 intensity={checkDirectionnalLightIntensity}
             />
             <ambientLight intensity={checkAmbientLightIntensity} />
-            <Environment preset="forest" />
+            <Environment files="/assets/rainforest_trail_2k.hdr" />
             {props.children}
         </Canvas>
     )
