@@ -29,7 +29,7 @@ const Infos = () => {
     return (
         <MainLayout bees={bees}>
             <StyledInfos>
-                <h1>My portfolio</h1>
+                <h1>Website Infos</h1>
                 <section>
                     <h2>Development</h2>
                     <ul>
