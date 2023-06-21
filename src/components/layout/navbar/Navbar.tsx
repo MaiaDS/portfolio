@@ -30,9 +30,11 @@ const Navbar = () => {
         setIsMenuHidden(theme === ScreenFormats.MOBILE)
     }, [theme])
 
-    const handleClick = () => {
-        setIsMenuHidden(!isMenuHidden)
-    }
+    useEffect(() => {
+        if (theme === ScreenFormats.MOBILE) {
+            setIsMenuHidden(!isMenuHidden)
+        }
+    }, [router.pathname])
 
     return (
         <StyledNavbar className={isMenuHidden ? 'hidden' : 'visible'}>
@@ -48,7 +50,12 @@ const Navbar = () => {
                 </ThreejsCanvas>
             )}
             {theme === ScreenFormats.MOBILE && (
-                <button onClick={handleClick}>{isMenuHidden && <MenuIco />}</button>
+                <button
+                    onClick={() => {
+                        setIsMenuHidden(!isMenuHidden)
+                    }}>
+                    {isMenuHidden && <MenuIco />}
+                </button>
             )}
             <ul>
                 <li>
@@ -61,7 +68,6 @@ const Navbar = () => {
                                             ? { pathname: link.route, query: link.query }
                                             : link.route
                                     }
-                                    onClick={handleClick}
                                     className={router.pathname === link.route ? 'active' : ''}>
                                     {link.label}
                                 </Link>
@@ -72,34 +78,25 @@ const Navbar = () => {
                 <li>
                     <ul>
                         <li>
-                            <a
-                                href="https://github.com/MaiaDS"
-                                onClick={handleClick}
-                                target="_blank"
-                                className="ico">
+                            <a href="https://github.com/MaiaDS" target="_blank" className="ico">
                                 <GitHubIco />
                             </a>
                         </li>
                         <li>
                             <a
                                 href="https://www.linkedin.com/in/maia-da-silva/"
-                                onClick={handleClick}
                                 target="_blank"
                                 className="ico">
                                 <LinkedInIco />
                             </a>
                         </li>
                         <li>
-                            <a
-                                href="/assets/cv_maia_da-silva.pdf"
-                                onClick={handleClick}
-                                target="_blank"
-                                className="ico">
+                            <a href="/assets/cv_maia_da-silva.pdf" target="_blank" className="ico">
                                 <OpenIco />
                             </a>
                         </li>
                         <li>
-                            <Link href="/infos" onClick={handleClick} className="ico">
+                            <Link href="/infos" className="ico">
                                 <InfosIco />
                             </Link>
                         </li>
