@@ -29,12 +29,17 @@ const Infos = () => {
     return (
         <MainLayout bees={bees}>
             <StyledInfos>
-                <h1>My portfolio</h1>
+                <h1>Website Infos</h1>
                 <section>
                     <h2>Development</h2>
                     <ul>
                         <li>By Maïa Da Silva</li>
                         <li>Next.js, Three.js, GitHub, Vercel</li>
+                        <li>
+                            <a href="https://github.com/MaiaDS/portfolio" target="_blank">
+                                GitHub repository
+                            </a>
+                        </li>
                     </ul>
                 </section>
                 <section>
