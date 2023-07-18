@@ -13,10 +13,10 @@ export const EXPERIENCES: Experience[] = [
         dates: 'March 2022 - February 2023',
         location: 'Toulouse, France',
         description: [
-            'Employed by SOGETI to work on behalf of SANOFI as part of a Capgemini cross-entity team.',
-            'Responsible for the front-end development of a data management tool used for pre-clinical studies.',
+            'Contributed to a cross-entity team from Capgemini, working for SANOFI on a crucial data management tool for pre-clinical studies.',
+            'Led front-end development (JHipster, Angular), ensuring functionality and seamless visual integration.',
             'Collaborated with back-end developers and designers to ensure the tool meet the client’s and users’ expectations.',
-            'Used SCRUM methodology as part of the development process, participating in SCRUM events as a developer and leading meetings as a replacement for the scrum master when needed.'
+            'Actively participated in SCRUM events, and occasionally stepped in as a replacement for the scrum master, effectively leading meetings to ensure project progress and team coordination.'
         ]
     },
     {
@@ -26,8 +26,8 @@ export const EXPERIENCES: Experience[] = [
         dates: 'February 2023',
         location: 'Toulouse, France',
         description: [
-            "Integrated 2 pages of a WordPress website using WP Bakery for Hamac's client : domaine-dampierre.com and domaine-dampierre.com/seminaire-yvelines",
-            "Collaborated with the designer and SEO Manager to ensure the website's functionality and search engine optimization were up to standard."
+            "Worked with WP Bakery to integrate two pages of a WordPress website, domaine-dampierre.com, and domainedampierre.com/seminaire-yvelines, following a redesign. The objective was to enhance the website's aesthetics and create a more user-friendly experience.",
+            "Collaborated closely with the designer and SEO Manager to optimize the website's functionality and improve search engine rankings, enhancing its online visibility and driving organic traffic."
         ]
     },
     {
@@ -37,9 +37,9 @@ export const EXPERIENCES: Experience[] = [
         dates: 'April - September 2021',
         location: 'Toulouse, France',
         description: [
-            'Custom theme development and maintenance using Drupal and WordPress for clients such as canal-du-midi.com, xvparlementaire.fr, and groupeorion-oncologie-radiotherapie.fr.',
-            'Participated in the creation of functional specifications and provided time estimates and planning.',
-            'Demonstrated the ability to work in a fast-paced, deadline-driven environment.'
+            'Leveraged Drupal and WordPress to develop customized themes and maintain websites for esteemed clients like canal-du-midi.com, xvparlementaire.fr, and groupeorion-oncologie-radiotherapie.fr.',
+            'Contributed to functional specifications, assessed project timelines, and played an integral role in project planning, enabling the team to set achievable goals and effectively manage project milestones.',
+            'Thrived in a fast-paced, deadline-driven environment.'
         ]
     },
     {
@@ -48,8 +48,9 @@ export const EXPERIENCES: Experience[] = [
         dates: 'November 2020 - June 2021',
         location: 'Toulouse, France',
         description: [
-            'Took charge of the UX/UI design and front-end development of a web-application for data and documentation management using React and Material UI.',
-            'Collaborated with diverse disciplines, including legal advisors and sociologists, within an agile environment.'
+            'Spearheaded the UX/UI design and front-end development of a web application for data and documentation management to optimize the startup work processes, resulting in substantial time and cost savings.',
+            'Used React and Material UI, combining aesthetics and usability to create an intuitive and visually pleasing user interface.',
+            "Collaborated closely with legal advisors and sociologists within an agile environment, ensuring the application's design and functionality effectively addressed user needs."
         ]
     },
     {
@@ -59,8 +60,8 @@ export const EXPERIENCES: Experience[] = [
         dates: 'June - August 2020',
         location: 'Toulouse, France',
         description: [
-            'Developed and debugged functionalities for bluehelper.fr, a website to post and find missions in the medical and charity field, using SMARTY (PHP, HTML, CSS).',
-            'Took charge of the technical team of interns, helping to organize and distribute tasks according to their skills.'
+            'Developed and debugged functionalities for bluehelper.fr, a platform connecting medical and charity professionals to volunteers, using SMARTY (PHP, HTML, CSS).',
+            'Assumed a leadership role within the intern technical team, effectively organizing and distributing tasks based on individual skills, optimizing efficiency and productivity.'
         ]
     },
     {
@@ -71,8 +72,8 @@ export const EXPERIENCES: Experience[] = [
         location: 'Toulouse, France',
         description: [
             "Designed Instagram visuals for Pitta Rosso and the agency's press releases.",
-            'Developed design proposals for logos and promotional items.',
-            "Assisted the team in organizing and executing the agency's main event, the MAP festival."
+            'Developed design proposals for logos and promotional items, aligning with client requirements and brand identity.',
+            "Provided valuable assistance for the agency's flagship event, the MAP festival, contributing to its overall success."
         ]
     }
 ]
