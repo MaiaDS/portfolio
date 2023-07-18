@@ -15,21 +15,21 @@ export const EDUCATION: Education[] = [
         location: 'Online Course'
     },
     {
-        title: 'BACHELOR’S DEGREE',
+        title: 'Licence Professionnelle (Bachelor Degree)',
         specialty: 'Full-stack Development',
         school: 'Capitole University',
         dates: '2020-2021',
         location: 'Toulouse, France'
     },
     {
-        title: 'DUT (Technology Degree)',
+        title: 'Diplôme Universitaire De Technologie (DEC-T)',
         specialty: 'IT',
         school: 'Paul Sabatier University',
         dates: '2019-2020',
         location: 'Toulouse, France'
     },
     {
-        title: 'BTS (french degree)',
+        title: 'Brevet de Technicien Supérieur (DEC-T)',
         specialty: 'GRAPHIC DESIGN',
         school: 'ESAAT',
         dates: '2017-2019',

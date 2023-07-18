@@ -27,7 +27,7 @@ const AboutMe = () => {
     const tabs: Tab[] = [
         { label: 'Skills', ico: <SkillsIco />, component: <Skills />, bees: [] },
         {
-            label: 'Experiences',
+            label: 'Experience',
             ico: <ExperiencesIco />,
             component: <Experiences />,
             bees:
